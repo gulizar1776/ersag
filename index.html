@@ -8,35 +8,45 @@
       body {
         font-family: Arial, sans-serif;
         margin: 20px;
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        width: 100vw;
       }
+
       .container {
         max-width: 400px;
         margin: auto;
-        padding: 40px;
+        padding: 20px;
         border: 1px solid #ddd;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
+
       .header {
         text-align: center;
         margin-bottom: 20px;
       }
+
       .header h1 {
         color: orange;
       }
+
       label {
         font-weight: bold;
         display: block;
         margin: 10px 0 5px;
       }
+
       input,
       textarea {
-        width: 100%;
+        width: 95%;
         padding: 10px;
         margin-bottom: 15px;
         border: 1px solid #ccc;
         border-radius: 5px;
       }
+
       button {
         width: 100%;
         padding: 10px;
@@ -47,13 +57,18 @@
         font-size: 16px;
         cursor: pointer;
       }
+
       button:hover {
         background-color: darkorange;
       }
+
       .btn-group {
         display: flex;
         justify-content: space-between;
+        margin-top: 5px;
+        gap: 5px;
       }
+
       .btn-group a {
         text-decoration: none;
         padding: 10px;
@@ -64,32 +79,41 @@
         width: 48%;
         display: inline-block;
       }
+
       .btn-group a:hover {
         background-color: darkorange;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
       }
     </style>
   </head>
   <body>
     <div class="container">
+      <img src="images.jpg" />
       <div class="header">
         <h1>Ersag Üyelik Formu</h1>
-        <p><strong>Sponsor:</strong> Abi Tan</p>
-        <p><strong>Sponsor No:</strong> 1058609</p>
-        <p><strong>GSM:</strong> 0546 219 28 46</p>
+        <p>
+          <strong>Sponsor:</strong> Abi Tan
+        </p>
+        <p>
+          <strong>Sponsor No:</strong> 1058609
+        </p>
+        <p>
+          <strong>GSM:</strong> 0546 219 28 46
+        </p>
       </div>
       <form action="#" method="post">
         <label for="name">Ad Soyad:</label>
         <input type="text" id="name" name="name" required />
-
         <label for="tc">TC Kimlik No:</label>
         <input type="text" id="tc" name="tc" required />
-
         <label for="phone">Cep Telefonu:</label>
         <input type="tel" id="phone" name="phone" required />
-
         <label for="address">Adres:</label>
         <textarea id="address" name="address" rows="4" required></textarea>
-
         <button type="submit">Formu Gönder</button>
       </form>
       <div class="btn-group">
