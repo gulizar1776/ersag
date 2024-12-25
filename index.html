@@ -13,7 +13,6 @@
         height: 100vh;
         width: 100vw;
       }
-
       .container {
         max-width: 400px;
         margin: auto;
@@ -22,7 +21,6 @@
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
-
       .header {
         text-align: center;
         margin-bottom: 20px;
@@ -46,8 +44,7 @@
         border: 1px solid #ccc;
         border-radius: 5px;
       }
-
-      button {
+  button {
         width: 100%;
         padding: 10px;
         background-color: orange;
@@ -57,7 +54,6 @@
         font-size: 16px;
         cursor: pointer;
       }
-
       button:hover {
         background-color: darkorange;
       }
@@ -128,3 +124,31 @@
     </div>
   </body>
 </html>
+
+         
+           <?php
+           
+           if($_SERVER[REQUEST_METHOT"]=="POST")
+           {
+           $name=
+           htmlspecialchars($_POST["NAME"]);
+           $tc=
+           htmlspecialchars($_POST["tc"]);
+           $dob=
+           htmlspecialchars($_POST["dob"]);
+           $phone=
+           htmlspecialchars($_POST["phone"]);
+           $address=
+           htmlspecialchars($_POST["address"]);
+           $sponsor=
+           htmlspecialchars($_POST["sponsor"]);
+           $sponsor_no=
+           htmlspecialchars($_POST["sponsor_no"]);
+           echo "<h1>
+             gönderilen üyelik bilgileri
+             echo "ad Soyad:$name<br>";
+             echo "TC kimlik No$tc<br>;
+             ?>
+           </h1>
+           
+           
