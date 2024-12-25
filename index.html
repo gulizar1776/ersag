@@ -136,43 +136,7 @@
        
         <label for="address">Adres:</label>
         <textarea id="address" name="address" rows="4" required></textarea>
-        <label for="il">il seçin:</label>
-        <select id="il"
-          onchange="loadDistricts()">
-          <option value=""disapled
-            selected>il seçiniz</option>
-        </select>
-        <br>
-        <button
-          onlick="showSelection()">Seçimi Göster</button>
-        button>
-        <div id="result"></div>
-        <script>
-          const API_URL="http://turkiyeapi.cyclic.app/api/v1
-            <provinces";
-            async funciton loadCities(){
-              try{
-                const response=await
-                  fetch(API_URL);
-                const cities= await
-                  response.json();
-                const ilSelect=
-                  document.getElementById("il");
-                cities.forEach(city=>{
-                  const option=
-                    document.createElement("option");
-                  option.value=
-                    city.name;
-                  optiontextContent=
-                    city.name;
-                  option.dataset.id=
-                    city.id;
-                  ilSelect.appendChild(option);
-                  });
-               C catch (error){
-                console.error("iller yüklenirken hata oluştu:",error);
-                }
-              }
+        
                     
         </script>
         <button type="submit">Formu Gönder</button>
