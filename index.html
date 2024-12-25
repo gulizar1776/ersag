@@ -91,40 +91,232 @@
       <img src="images.jpg" />
       <div class="header">
         <h1>Ersag Üyelik Formu</h1>
-      <p>
-          <strong>Sponsor:</strong> Abi Tan
-        </p>
-        <p>
-          <strong>Sponsor No:</strong> 1058609
-        </p>
-        <p>
-          <strong>GSM:</strong> 0546 219 28 46
-        </p>
-      </div>
-  
-        <label for="name">Ad Soyad:</label>
-        <input type="text" id="name" name="name" required />
-         <div class="card card-primary">
-            <div class="card-header">        
-        <label for="tc">TC Kimlik No:</label>
-        <input type="text" id="tc" name="tc" required />
-        <label for="phone">Cep Telefonu:</label>
-        <input type="tel" id="phone" name="phone" required /> 
-         <div class="card card-primary">
-            <div class="card-header">       	    
-        <label for="address">Adres:</label>
-        <textarea id="address" name="address" rows="4" required></textarea> 
-        <button type="submit">Formu Gönder</button>
-      </form>
-      <div class="btn-group">
-                <a href="https://wa.me/905462192846">WhatsApp ile İletişim</a>
-        </a>    
-       <a href="https://instagram.com">Instagram Profili</a>
-      </div>
-    </div>
-  </body>
-</html>
+        
+     <div class="content">
+    <div class="container">
 
-         
-          
-      
+<div class="row">         
+
+
+
+<div class="col-12">
+    <div class="alert alert-info"><sup>*</sup> Gerekli Alanlar</div>
+    <form action="/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor=" method="post" name="frmRegister" id="frmRegister" class="form-horizontal">
+    <input type="hidden" name="do" id="do" value="save" /><input type="hidden" name="ickoruma" id="ickoruma" value="8209875" />
+ 
+<div class="row">
+    <div class="col-12">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Sponsor Bilgileri</h3>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                  <label for="sponsor">Sponsor Numarası</label>
+                    <div class="input-group">
+                        <input name="sponsor" class="form-control " type="number" id="sponsor" value="4442916">                        
+                        <div class="input-group-append">
+                            <div class="input-group-text"><a href="#" onclick="doSponsor()">Numarayı Kontrol Et</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Adı Soyadı</label>
+                    <div class="col-md-8"><p class="form-control-static" id="sponsor_name">GÜLİZAR KURT</p></div>
+                </div>
+                <div class="form-group">
+                    <label>Kariyeri</label>
+                    <div class="col-md-8"><p class="form-control-static" id="sponsor_groupname">ÖNCÜ YARDIMCISI</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Kişisel Bilgiler</h3>
+            </div>
+            <div class="card-body">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="sponsor">Kimlik Numarası *</label>
+                            <div class="col-md-8">
+                                <input name="identitynumber" class="form-control" type="text" id="identitynumber" value="">
+                                <span class="help-block">Avrupadan üye olanlar lütfen pasaport ya da bulunduğu ülkenin kimlik numarasını giriniz. Mükerrer üye karışımını önlemek adına istenmektedir.</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Adı *</label>
+                            <div class="col-md-8"><input id="firstname" name="firstname" class="form-control input-md " type="text" value=""></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Soyadı *</label>
+                            <div class="col-md-8"><input id="lastname" name="lastname" class="form-control input-md" type="text" value=""></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Doğum Tarihi *</label>
+                            <div class="input-group date col-md-8 datepicker">
+                                <input type="text" class="form-control " name="dateofbirth" id="dateofbirth" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" inputmode="numeric" value="">
+                                <!--
+                                <input type="text" name="dateofbirth" class="form-control datetimepicker-input " data-target="#dateofbirth" value="">
+                                -->
+                                <div class="input-group-append" data-target="#dateofbirth" data-toggle="datepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Medeni Durumu *</label>
+                            <div class="col-md-8"><select id="marialstatus" name="marialstatus" class="form-control"><option value='0' selected>Seçiniz</option><option value='1' >Bekar</option><option value='2' >Evli</option><option value='3' >Boşanmış</option></select></div>
+                        </div>
+                        <div class="form-group" id="trpartnername" style="display:none;" >
+                            <label class="col-md-4 control-label">Eşinin Adı *</label>
+                            <div class="col-md-8"><input id="partnername" name="partnername" class="form-control input-md" type="text" value=""></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">İşi *</label>
+                            <div class="col-md-8"><input id="job" name="job" class="form-control input-md" type="text" value=""></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Dili *</label>
+                            <div class="col-md-8"><select name="user_lang_id" id="user_lang_id"  class="form-control"><option value='4' selected>Türkçe</option><option value='6' >English</option><option value='8' >&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</option></select></div>
+                        </div>
+            </div>
+        </div>
+
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Şifre Bilgileri</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Şifre *</label>
+                    <div class="col-md-8"><input id="password1" name="password1" class="form-control input-md" type="password" value=""></div>
+                </div>
+                <div class="form-group">
+                    <div id="password-strength-status" class="col-md-12" data-weaktext="Zayıf (En az 6 karakter olmalıdır.)" data-mediumtext="Orta (Harf, sayı ve özel karakterler içermelidir.)" data-strongtext="Güçlü"> </div>  
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Şifre (Tekrar) *</label>
+                    <div class="col-md-8"><input id="password2" name="password2" class="form-control input-md" type="password" value=""></div>
+                </div>
+                		
+            </div>
+        </div>
+
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Hesap Bilgileri</h3>
+            </div>
+            <div class="card-body">
+                
+                    <div class="form-group clearfix">
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="hesaptipi0" name="hesaptipi" value="0" checked  />
+                            <label for="hesaptipi0">Banka</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="hesaptipi1" name="hesaptipi" value="1"   />
+                            <label for="hesaptipi1">PTT</label>
+                        </div>
+                    </div>
+                    <div id="hesap_detay0" >
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Banka Adı *</label>
+                            <div class="col-md-8"><input id="bankname" name="bankname" class="form-control input-md" type="text" value=""></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">IBAN Nu *</label>
+                            <div class="col-md-8"><input id="accountnumber" name="accountnumber" class="form-control input-md" type="text" value=""><span class="help-block">Şirketimiz tarafından hak edilmiş primlerinizin kendi hesabınıza gönderilmesi için istenmektedir.</span></div>
+                        </div>                            
+                    </div>
+                    <div id="hesap_detay1" style="display:none;" >
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">PTT Hesap No *</label>
+                            <div class="col-md-8"><input id="pttnu" name="pttnu" class="form-control input-md" type="text" value=""></div>
+                        </div>                        
+                    </div>						
+                   
+            </div>
+        </div>
+
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Erişim Bilgileri</h3>
+            </div>
+            <div class="card-body">
+				<div class="form-group">
+                    <label class="col-md-4 control-label">Bulunduğu Ülke *</label>
+                    <div class="col-md-8"><select name="user_country" id="user_country" class="form-control"><option>Seçiniz</option><option value="DİĞER" >D&#304;&#286;ER</option><option value="TÜRKİYE" selected>T&#220;RK&#304;YE</option></select></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Bulunduğu İl *</label>
+                    <div class="col-md-8"><select name="user_city" id="user_city"  class="form-control"></select></div>
+                </div>
+                <div class="form-group" id="divcounty">
+                    <label class="col-md-4 control-label">Bulunduğu İlçe *</label>
+                    <div class="col-md-8"><select name="user_county" id="user_county"  class="form-control"></select></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">EPosta Aboneliği</label>
+                    <div class="col-md-8"><input type="checkbox" name="user_emailok" id="user_emailok" value="yes" checked /></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Eposta</label>
+                    <div class="col-md-8"><input id="email" name="email" class="form-control input-md" type="text" value=""></div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-md-8 control-label">SMS Aboneliği</label>
+                            <div class="col-md-4"><input type="checkbox" name="user_smsok" id="user_smsok" value="yes" /></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-md-10 control-label" id="strRegionSMSSubscribed"><input type="hidden" name="OrjinalstrRegionSMSSubscribed" id="OrjinalstrRegionSMSSubscribed" value="$buro_muduru$ SMS Gönderebilsin" />ABİDE TAN SMS Gönderebilsin</label>
+                            <div class="col-md-2"><input type="checkbox" name="user_regionsmsok" id="user_regionsmsok" value="yes" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"><div class="col-md-12"><p class="form-control-static"></p></div></div>
+                
+                <div class="form-group">
+                    <label class="col-md-4 control-label">GSM Numarası*</label>
+                    <div class="col-md-8"><input id="mobile" name="mobile" class="form-control input-md" type="text" placeholder="905xxxxxxxxx" value=""></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Telefon Numarası</label>
+                    <div class="col-md-8"><input id="telephone" name="telephone" class="form-control input-md" type="text" placeholder="90xxxxxxxxxx" value=""></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Faks Numarası</label>
+                    <div class="col-md-8"><input id="fax" name="fax" class="form-control input-md" type="text" value=""></div>
+                </div>
+            </div>
+        </div>     
+           
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Fatura Adresi</h3>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label"  for="address">Fatura Adresi</label>
+                        <div class="col-md-8"><textarea rows="3" cols="26" name="address" class="form-control" id="address"></textarea></div>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="card card-primary">
+            <div class="card-footer">
+                <div class="float-right">
+                  <button type="button" id="btnLogin1" name="btnLogin1" class="btn btn-primary"><i class="fa fa-user"></i> Kayıt Ol</button>
+                </div>
+                <a href="https://www.ersag.com.tr/account.asp" class="button"><span>Geri Dön</span></a>
+            </div>        
+        </div>
+    </div>
+</div>
+<input name="txtVerificationCode" id="txtVerificationCode" type="hidden" value="">
+</form>
+</div>
