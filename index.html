@@ -133,7 +133,23 @@
         <input type="text" id="dogum tarihi" name="Dogum Tarihi" required/>
         <label for="phone">Cep Telefonu:</label>
         <input type="tel" id="phone" name="phone" required /> 
-       
+         <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Erişim Bilgileri</h3>
+            </div>
+            <div class="card-body">
+				<div class="form-group">
+                    <label class="col-md-4 control-label">Bulunduğu Ülke *</label>
+                    <div class="col-md-8"><select name="user_country" id="user_country" class="form-control"><option>Seçiniz</option><option value="DİĞER" >D&#304;&#286;ER</option><option value="TÜRKİYE" selected>T&#220;RK&#304;YE</option></select></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Bulunduğu İl *</label>
+                    <div class="col-md-8"><select name="user_city" id="user_city"  class="form-control"></select></div>
+                </div>
+                <div class="form-group" id="divcounty">
+                    <label class="col-md-4 control-label">Bulunduğu İlçe *</label>
+                    <div class="col-md-8"><select name="user_county" id="user_county"  class="form-control"></select></div>
+                </div>
         <label for="address">Adres:</label>
         <textarea id="address" name="address" rows="4" required></textarea>
         
