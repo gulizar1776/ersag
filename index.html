@@ -91,19 +91,15 @@
       <img src="images.jpg" />
       <div class="header">
         <h1>Ersag Üyelik Formu</h1>
-        <form action="ersag_kayit.php"
-          method="post">
-          <label for="sponsor">Sponsor Adı:</label>label
-          input type="text" id=""sponsor"
-          name="sponsor" value="ABİDE TAN"
-          readonly><br><br>;
-       <label for="sponsor_no">Sponsor No:</label>label
-          input type="text" id=""sponsor_no"
-          name="sponsor_no" value="1058609"
-          readonly><br><br>;
-          <input type=submit" value=Formu Gönder">
-        </form>             
-       
+      <p>
+          <strong>Sponsor:</strong> Abi Tan
+        </p>
+        <p>
+          <strong>Sponsor No:</strong> 1058609
+        </p>
+        <p>
+          <strong>GSM:</strong> 0546 219 28 46
+        </p>
       </div>
   
         <label for="name">Ad Soyad:</label>
@@ -130,35 +126,5 @@
 </html>
 
          
-           <?php
-           
-           if($_SERVER[REQUEST_METHOT"]=="POST")
-           {
-           $name=
-           htmlspecialchars($_POST["NAME"]);
-           $tc=
-           htmlspecialchars($_POST["tc"]);
-           $dob=
-           htmlspecialchars($_POST["dob"]);
-           $phone=
-           htmlspecialchars($_POST["phone"]);
-           $address=
-           htmlspecialchars($_POST["address"]);
-           $sponsor=
-           htmlspecialchars($_POST["sponsor"]);
-           $sponsor_no=
-           htmlspecialchars($_POST["sponsor_no"]);
-           echo "<h1>
-             gönderilen üyelik bilgileri </h1>
-           
-             echo "ad Soyad:$name<br>";
-             echo "TC kimlik No$tc<br>;
-           echo "telefon:$phone<br>;
-           echo "adres:$address<br>;
-           echo "sponsor<br>;
-           echo "Sponsor no:$sponsor_no<bt>;
-           
-             }
-             ?>
-        
-           
+          
+      
