@@ -1,735 +1,455 @@
-<!DOCTYPE html>
-<html lang="en">
+<script>window.enableEventObserver=true</script>
+<script src="https://cdn03.jotfor.ms/static/prototype.forms.js?v=3.3.59832" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/static/jotform.forms.js?v=3.3.59832" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/js/vendor/maskedinput_5.0.9.min.js?v=3.3.59832" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/s/umd/3426b8a2b6f/for-form-branding-footer.js?v=3.3.59832" type="text/javascript" defer></script>
+<script src="https://cdn03.jotfor.ms/js/vendor/smoothscroll.min.js?v=3.3.59832" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/js/errorNavigation.js?v=3.3.59832" type="text/javascript"></script>
+<script type="text/javascript">	JotForm.newDefaultTheme = true;
+	JotForm.extendsNewTheme = false;
+	JotForm.singleProduct = false;
+	JotForm.newPaymentUIForNewCreatedForms = true;
+	JotForm.texts = {"confirmEmail":"E-mail does not match","pleaseWait":"Please wait...","validateEmail":"You need to validate this e-mail","confirmClearForm":"Are you sure you want to clear the form","lessThan":"Your score should be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","required":"This field is required.","requireOne":"At least one field required.","requireEveryRow":"Every row is required.","requireEveryCell":"Every cell is required.","email":"Enter a valid e-mail address","alphabetic":"This field can only contain letters","numeric":"This field can only contain numeric values","alphanumeric":"This field can only contain letters and numbers.","cyrillic":"This field can only contain cyrillic characters","url":"This field can only contain a valid URL","currency":"This field can only contain currency values.","fillMask":"Field value must fill mask.","uploadExtensions":"You can only upload following files:","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","gradingScoreError":"Score total should only be less than or equal to","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","maxDigitsError":"The maximum digits allowed is","minCharactersError":"The number of characters should not be less than the minimum value:","maxCharactersError":"The number of characters should not be more than the maximum value:","freeEmailError":"Free email accounts are not allowed","minSelectionsError":"The minimum required number of selections is ","maxSelectionsError":"The maximum number of selections allowed is ","pastDatesDisallowed":"Date must not be in the past.","dateLimited":"This date is unavailable.","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","ageVerificationError":"You must be older than {minAge} years old to submit this form.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","chooseAFile_infoMessage":"Choose a file","maxFileSize_infoMessage":"Max. file size","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","ccInvalidNumber":"Credit Card Number is invalid.","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccMissingDetails":"Please fill up the credit card details.","ccMissingProduct":"Please select at least one product.","ccMissingDonation":"Please enter numeric values for donation amount.","disallowDecimals":"Please enter a whole number.","restrictedDomain":"This domain is not allowed","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","requiredLegend":"All fields marked with * are required and must be filled.","geoPermissionTitle":"Permission Denied","geoPermissionDesc":"Check your browser's privacy settings.","geoNotAvailableTitle":"Position Unavailable","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoTimeoutTitle":"Timeout","geoTimeoutDesc":"Please check your internet connection and try again.","selectedTime":"Selected Time","formerSelectedTime":"Former Time","cancelAppointment":"Cancel Appointment","cancelSelection":"Cancel Selection","noSlotsAvailable":"No slots available","slotUnavailable":"{time} on {date} has been selected is unavailable. Please select another slot.","multipleError":"There are {count} errors on this page. Please correct them before moving on.","oneError":"There is {count} error on this page. Please correct it before moving on.","doneMessage":"Well done! All errors are fixed.","invalidTime":"Enter a valid time","doneButton":"Done","reviewSubmitText":"Review and Submit","nextButtonText":"Next","prevButtonText":"Previous","seeErrorsButton":"See Errors","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","soldOut":"Sold Out","justSoldOut":"Just Sold Out","selectionSoldOut":"Selection Sold Out","subProductItemsLeft":"({count} items left)","startButtonText":"START","submitButtonText":"Submit","submissionLimit":"Sorry! Only one entry is allowed. <br> Multiple submissions are disabled for this form.","reviewBackText":"Back to Form","seeAllText":"See All","progressMiddleText":"of","fieldError":"field has an error.","error":"Error"};
+	JotForm.newPaymentUI = true;
+	JotForm.originalLanguage = "tr";
+	JotForm.isFormViewTrackingAllowed = true;
+	JotForm.replaceTagTest = true;
+	JotForm.uploadServerURL = "https://upload.jotform.com/upload";
+	JotForm.clearFieldOnHide="disable";
+	JotForm.submitError="jumpToFirstError";
+	window.addEventListener('DOMContentLoaded',function(){window.brandingFooter.init({"formID":243604627584058,"campaign":"powered_by_jotform_le","isCardForm":false,"isLegacyForm":true,"formLanguage":"tr"})});	JotForm.isFullSource = true;
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html;charset=windows-1254">
-  <META http-equiv="Content-Language" content="tr" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ersağ Temizlik ve Kozmetik Ürünleri Resmi Web Sitesi</title>
-  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
-  <META HTTP-EQUIV="Expires" CONTENT="-1">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//dosya.ersag.com.tr/yukleme/tema/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//dosya.ersag.com.tr/yukleme/tema/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//dosya.ersag.com.tr/yukleme/tema/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="//https://www.ersag.com.tr/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor=4442916
-                                                 
-  <link rel="shortcut icon" href="//dosya.ersag.com.tr/yukleme/tema/ico/favicon.png">
+	JotForm.init(function(){
+	/*INIT-START*/
 
-  <meta name="author" content="ERSAĞ">
-  <meta name="apple-itunes-app" content="app-id=6471481264">
-  <meta name="google-play-app" content="app-id=com.ayfanet.ersag_mobile_app">
-  <meta name="apple-itunes-app-tracking" content="">
-  <meta name="google-play-app-tracking" content="intent://#Intent;scheme=ersag;package=com.ayfanet.ersag_mobile_app;end">
+ JotForm.calendarMonths = ["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+ if (!JotForm.calenderViewMonths) JotForm.calenderViewMonths = {};  JotForm.calenderViewMonths[11] = ["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+ if (!JotForm.calenderViewDays) JotForm.calenderViewDays = {};  JotForm.calenderViewDays[11] = ["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi","Pazar"];
+ JotForm.calendarDays = ["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi","Pazar"];
+ JotForm.calendarOther = {"today":"Bugün"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("11", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":"","countSelectedDaysOnly":false}); }, 0); });
+ } 
+ JotForm.onTranslationsFetch(function() { JotForm.setCalendar("11", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":"","countSelectedDaysOnly":false}); });
+if (window.JotForm && JotForm.accessible) $('input_32').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_34').setAttribute('tabindex',0);
+      JotForm.setPhoneMaskingValidator( 'input_24_full', '\u0028\u0023\u0023\u0023\u0029 \u0023\u0023\u0023\u002d\u0023\u0023\u0023\u0023' );
+      JotForm.alterTexts({"ageVerificationError":"Bu formu göndermek için {minAge} yaşından büyük olmanız gerekiyor.","alphabetic":"Bu alan yalnızca harf kullanılarak doldurulabilir","alphanumeric":"Bu alan yalnızca harf ve sayı içerebilir.","cancelAppointment":"Randevuyu İptal Et","cancelSelection":"Seçimi İptal Et","ccDonationMinLimitError":"Minimum tutar {minAmount} {currency}","ccInvalidCVC":"CVC numarası geçersiz.","ccInvalidExpireDate":"Son kullanma tarihi geçersiz.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccInvalidNumber":"Kredi Kartı Numarası geçersiz.","ccMissingDetails":"Lütfen kredi kartı bilgilerini doldurun.","ccMissingDonation":"Lütfen bağış tutarı için sayısal değerler girin.","ccMissingProduct":"Lütfen en az bir ürün seçin.","characterLimitError":"Çok fazla karakter girdiniz. Maksimum:","characterMinLimitError":"Çok az karakter girdiniz. Minimum:","chooseAFile_infoMessage":"Dosya seç","confirmClearForm":"Formu temizlemek istediğinize emin misiniz?","confirmEmail":"E-posta eşleşmiyor","currency":"Bu dosya sadece geçerli değerler içerebilir","cyrillic":"Bu alan sadece Kiril karakterleri içerebilir","dateInvalid":"Bu tarih geçerli değil. Tarih biçimi: {format}","dateInvalidSeparate":"Bu tarih geçerli değil. Geçerli bir {element} girin.","dateLimited":"Bu tarih kullanılamaz.","disallowDecimals":"Bir tam sayı girin.","doneButton":"Tamam","doneMessage":"Teşekkürler! Tüm hatalar düzeltildi.","dragAndDropFilesHere_infoMessage":"Dosyaları buraya sürükleyip bırakın","email":"Geçerli bir e-posta adresi girin","error":"Hata","fieldError":"alanda bir hata var.","fillMask":"Alan değeri maskesi doldurmalıdır.","formerSelectedTime":"Önceki Seçim","freeEmailError":"Ücretsiz e-posta hesaplarına izin verilmez","generalError":"Formunuzda hatalar var. Lütfen devam etmeden önce düzeltin.","generalPageError":"Bu sayfada hatalar var. Devam etmeden önce lütfen düzeltin.","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoNotAvailableTitle":"Position Unavailable","geoPermissionDesc":"Check your browser's privacy settings.","geoPermissionTitle":"Permission Denied","geoTimeoutDesc":"Please check your internet connection and try again.","geoTimeoutTitle":"Timeout","gradingScoreError":"Toplam puan şundan az ya da şuna eşit olmalıdır:","incompleteFields":"Bazı zorunlu alanlar doldurulmamış. Lütfen bu alanları doldurun.","inputCarretErrorA":"Girdi minimum değerden az olamaz:","inputCarretErrorB":"Girdi maksimum değerden büyük olamaz:","invalidTime":"Geçerli bir zaman girin","justSoldOut":"Yeni Tükendi","lessThan":"Puanınız şundan az ya da şuna eşit olmalıdır:","maxCharactersError":"The number of characters should not be more than the maximum value:","maxDigitsError":"Kabul edilebilen maksimum basamak sayısı","maxFileSize_infoMessage":"Maksimum dosya boyutu","maxSelectionsError":"The maximum number of selections allowed is ","minCharactersError":"Karakter sayısı minimum değerden daha az olmamalıdır:","minSelectionsError":"Gerekli minimum seçim sayısı:","multipleError":"Bu sayfada {count} hata var. Lütfen devam etmeden önce bunları düzeltin.","multipleFileUploads_emptyError":"{file} boş, lütfen dosyaları bu dosya olmadan tekrar seçin.","multipleFileUploads_fileLimitError":"Sadece {fileLimit} dosya yüklemesine izin verilmektedir.","multipleFileUploads_minSizeError":"{file} çok küçük, minimum dosya boyutu {minSizeLimit}.","multipleFileUploads_onLeave":"Dosyalar yükleniyor, şimdi çıkarsanız yükleme iptal edilecek.","multipleFileUploads_sizeError":"{file} çok büyük, maksimum dosya boyutu {sizeLimit}.","multipleFileUploads_typeError":"{file} geçersiz dosya uzantısına sahip. Sadece {extensions} dosya uzantılarına izin verilmektedir.","multipleFileUploads_uploadFailed":"Dosya yükleme başarısız oldu, lütfen silip dosyayı tekrar yükleyin.","nextButtonText":"İleri","noSlotsAvailable":"Boş zaman aralığı yok","notEnoughStock":"Mevcut seçim için yeterli stok bulunmuyor","notEnoughStock_remainedItems":"Mevcut seçim için yeterli stok bulunmuyor ({count} ürün kaldı)","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","numeric":"Bu alan sadece sayısal değerler içerebilir","oneError":"Bu sayfada {count} hata var. Lütfen devam etmeden önce bunu düzeltin.","pastDatesDisallowed":"Tarih geçmişte olmamalı.","pleaseWait":"Lütfen bekleyin...","prevButtonText":"Geri","progressMiddleText":"/","required":"Bu alan zorunludur.","requiredLegend":"* ile işaretlenmiş tüm alanların doldurulması gerekmektedir","requireEveryCell":"Bütün hücreler zorunlu.","requireEveryRow":"Bütün satırlar zorunlu.","requireOne":"En az bir alan zorunlu.","restrictedDomain":"This domain is not allowed","reviewBackText":"Forma Dön","reviewSubmitText":"İncele ve Gönder","seeAllText":"Tümünü Gör","seeErrorsButton":"Hataları Gör","selectedTime":"Mevcut Seçim","selectionSoldOut":"Seçim Tükendi","slotUnavailable":"{date} günü saat {time} rezerve edilmiş. Lütfen başka aralık seçin.","soldOut":"Tükendi","startButtonText":"BAŞLA","submissionLimit":"Üzgünüz! Bu form sadece bir kez gönderilebilir. &lt;br&gt;Çoklu form yanıtlama bu formda devre dışı.","submitButtonText":"Gönder","subProductItemsLeft":"({count} adet kaldı)","uploadExtensions":"Yalnızca şu dosyaları yükleyebilirsiniz:","uploadFilesize":"Dosya boyutu daha büyük olamaz:","uploadFilesizemin":"Dosya boyutu belirtilenden küçük olamaz:","url":"Bu alan yalnızca geçerli bir URL içerebilir","validateEmail":"Bu e-postayı doğrulamanız gereklidir","wordLimitError":"Çok fazla kelime girdiniz. Maksimum:","wordMinLimitError":"Çok az kelime girdiniz. Minimum:"});
+	/*INIT-END*/
+	});
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/sponsor:4442916/account/adminlte/plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-
-  <!-- bootstrap 4 -->
-  <link type="text/css" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <link type="text/css" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap/fonts/glyphicons.css" rel="stylesheet" type="text/css" />
-
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jqvmap/jqvmap.min.css">
-  <!-- Ekko Lightbox -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/ekko-lightbox/ekko-lightbox.css">
-  <!-- Theme style -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/dist/css/adminlte.min.css">
-  <!-- overlayScrollbars -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/daterangepicker/daterangepicker.css">
-
-  <!-- summernote -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/summernote/summernote-bs4.min.css">
-  <!-- Bootstrap Color Picker -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
-  <!-- Select2 -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/select2/css/select2.min.css">
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-  <!-- Bootstrap4 Duallistbox -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
-  <!-- BS Stepper -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bs-stepper/css/bs-stepper.min.css">
-  <!-- dropzonejs -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/dropzone/min/dropzone.min.css">
-
-  <!-- ersag -->
-  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/dist/css/ersag.css?v=7">
-  <!-- jQuery -->
-  <script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jquery/jquery.min.js"></script>
-  <script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jquery/jquery-migrate-1.2.1.js"></script>
-  <style type="text/css">
-    #spinner-div {
-      position: fixed;
-      display: none;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.8);
-      z-index: 1000000;
-    }
-  </style>
-
-</head>
-<div id="spinner-div" class="pt-5">
-  <div class="spinner-border text-primary" role="status">
-  </div>
-</div>
-
-<body class="hold-transition layout-top-nav">
-  <div class="wrapper">
-    <nav class="main-header navbar navbar-expand navbar-dark navbar-cyan">
-      <div class="container">
-        <a href="https://www.ersag.com.tr/account.asp" class="navbar-brand">
-          <img src="//dosya.ersag.com.tr/yukleme/tema/images/logo_account.png" style="opacity: .8">
-        </a>
-        <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#">
-              <i class="fas fa-globe"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-              <a href="?language_id=8" class="dropdown-item">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a> <a href="?language_id=6" class="dropdown-item">English</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.ersag.com.tr/account.asp" role="button">
-              <i class="fas fa-home"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-              <i class="fas fa-expand-arrows-alt"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="content-wrapper">
-      <div class="content">
-        <div class="container">
-          <section class="content-header">
-            <div class="container">
-              <div class="row mb-2">
-                <div class="col-sm-6">
-                  <h1>Üye Ol</h1>
-                </div>
-              </div>
-            </div><!-- /.container-fluid -->
-          </section>
-          <div class="content">
-            <div class="container">
-
-              <div class="row">
-
-                <div class="col-12">
-                  <div class="alert alert-info"><sup>*</sup> Gerekli Alanlar</div>
-                  <form action="/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor=" method="post" name="frmRegister" id="frmRegister" class="form-horizontal">
-                    <input type="hidden" name="do" id="do" value="save" /><input type="hidden" name="ickoruma" id="ickoruma" value="1433142" />
-
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="card card-primary">
-                          <div class="card-header">
-                            <h3 class="card-title">Sponsor Bilgileri</h3>
-                            <p><strong>Adı:</strong> <span class="highlight">Gulızar Kurt</span></p>
-                            <p><strong>sponsor kodu:</strong>
-                              <span class_"higlight">4442916</span>
-                            </p>
-
-                            <strong>iletisim numarası:</strong>
-                            <span class="higlight">05421274017</span></p>
-                            <p>bu sponsor üzerinden üye oldunuz. sorularınız için iletişime geçiniz.</p>
-<div id=”social-links”>
-<p>sosyal medyada takip edin:</p>
-<a  href=”http:/www.instagram.com/kalbiahsen73” 
-target=”_blank”>
-<img src=”instagram-icon.png”
-Alt=”Instagram” style=”width:24px;”>
-</a>
-</div><script>
-                            <div </div>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label>Adı Soyadı</label>
-                            <div class="col-md-8">
-                              <p class="form-control-static" id="sponsor_name"> </p>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label>Kariyeri</label>
-                            <div class="col-md-8">
-                              <p class="form-control-static" id="sponsor_groupname"></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card card-primary">
-                        <div class="card-header">
-                          <h3 class="card-title">Kişisel Bilgiler</h3>
-                        </div>
-                        <div class="card-body">
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="sponsor">Kimlik Numarası *</label>
-                            <div class="col-md-8">
-                              <input name="identitynumber" class="form-control" type="text" id="identitynumber" value="">
-                              <span class="help-block">Avrupadan üye olanlar lütfen pasaport ya da bulunduğu ülkenin kimlik numarasını giriniz. Mükerrer üye karışımını önlemek adına istenmektedir.</span>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">Adı *</label>
-                            <div class="col-md-8"><input id="firstname" name="firstname" class="form-control input-md " type="text" value=""></div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">Soyadı *</label>
-                            <div class="col-md-8"><input id="lastname" name="lastname" class="form-control input-md" type="text" value=""></div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">Doğum Tarihi *</label>
-                            <div class="input-group date col-md-8 datepicker">
-                              <input type="text" class="form-control " name="dateofbirth" id="dateofbirth" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" inputmode="numeric" value="">
-                              <!--
-                                <input type="text" name="dateofbirth" class="form-control datetimepicker-input " data-target="#dateofbirth" value="">
-                                -->
-                              <div class="input-group-append" data-target="#dateofbirth" data-toggle="datepicker">
-                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">Medeni Durumu *</label>
-                            <div class="col-md-8"><select id="marialstatus" name="marialstatus" class="form-control">
-                                <option value='0'>Seçiniz</option>
-                                <option value='1'>Bekar</option>
-                                <option value='2'>Evli</option>
-                                <option value='3'>Boşanmış</option>
-                              </select></div>
-                          </div>
-                          <div class="form-group" id="trpartnername" style="display:none;">
-                            <label class="col-md-4 control-label">Eşinin Adı *</label>
-                            <div class="col-md-8"><input id="partnername" name="partnername" class="form-control input-md" type="text" value=""></div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">İşi *</label>
-                            <div class="col-md-8"><input id="job" name="job" class="form-control input-md" type="text" value=""></div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">Dili *</label>
-                            <div class="col-md-8"><select name="user_lang_id" id="user_lang_id" class="form-control">
-                                <option value='4'>Türkçe</option>
-                                <option value='6'>English</option>
-                                <option value='8'>&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</option>
-                              </select></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card card-primary">
-                        <div class="card-header">
-                          <h3 class="card-title">Şifre Bilgileri</h3>
-                        </div>
-                        <div class="card-body">
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">Şifre *</label>
-                            <div class="col-md-8"><input id="password1" name="password1" class="form-control input-md" type="password" value=""></div>
-                          </div>
-                          <div class="form-group">
-                            <div id="password-strength-status" class="col-md-12" data-weaktext="Zayıf (En az 6 karakter olmalıdır.)" data-mediumtext="Orta (Harf, sayı ve özel karakterler içermelidir.)" data-strongtext="Güçlü"> </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">Şifre (Tekrar) *</label>
-                            <div class="col-md-8"><input id="password2" name="password2" class="form-control input-md" type="password" value=""></div>
-                          </div>
-
-                        </div>
-                      </div>
-
-                      <div class="card card-primary">
-                        <div class="card-header">
-                          <h3 class="card-title">Hesap Bilgileri</h3>
-                        </div>
-                        <div class="card-body">
-
-                          <div class="form-group clearfix">
-                            <div class="icheck-primary d-inline">
-                              <input type="radio" id="hesaptipi0" name="hesaptipi" value="0" checked />
-                              <label for="hesaptipi0">Banka</label>
-                            </div>
-                            <div class="icheck-primary d-inline">
-                              <input type="radio" id="hesaptipi1" name="hesaptipi" value="1" />
-                              <label for="hesaptipi1">PTT</label>
-                            </div>
-                          </div>
-                          <div id="hesap_detay0">
-                            <div class="form-group">
-                              <label class="col-md-4 control-label">Banka Adı *</label>
-                              <div class="col-md-8"><input id="bankname" name="bankname" class="form-control input-md" type="text" value=""></div>
-                            </div>
-                            <div class="form-group">
-                              <label class="col-md-4 control-label">IBAN Nu *</label>
-                              <div class="col-md-8"><input id="accountnumber" name="accountnumber" class="form-control input-md" type="text" value=""><span class="help-block">Şirketimiz tarafından hak edilmiş primlerinizin kendi hesabınıza gönderilmesi için istenmektedir.</span></div>
-                            </div>
-                          </div>
-                          <div id="hesap_detay1" style="display:none;">
-                            <div class="form-group">
-                              <label class="col-md-4 control-label">PTT Hesap No *</label>
-                              <div class="col-md-8"><input id="pttnu" name="pttnu" class="form-control input-md" type="text" value=""></div>
-                            </div>
-                          </div>
-
-                        </div>
-                      </div>
-
-                      <div class="card card-primary">
-                        <div class="card-header">
-                          <h3 class="card-title">Erişim Bilgileri</h3>
-                        </div>
-                        <div class="card-body">
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">Bulunduğu Ülke *</label>
-                            <div class="col-md-8"><select name="user_country" id="user_country" class="form-control">
-                                <option>Seçiniz</option>
-                                <option value="DİĞER">D&#304;&#286;ER</option>
-                                <option value="TÜRKİYE" selected>T&#220;RK&#304;YE</option>
-                              </select></div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">Bulunduğu İl *</label>
-                            <div class="col-md-8"><select name="user_city" id="user_city" class="form-control"></select></div>
-                          </div>
-                          <div class="form-group" id="divcounty">
-                            <label class="col-md-4 control-label">Bulunduğu İlçe *</label>
-                            <div class="col-md-8"><select name="user_county" id="user_county" class="form-control"></select></div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">EPosta Aboneliği</label>
-                            <div class="col-md-8"><input type="checkbox" name="user_emailok" id="user_emailok" value="yes" checked /></div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">Eposta</label>
-                            <div class="col-md-8"><input id="email" name="email" class="form-control input-md" type="text" value=""></div>
-                          </div>
-
-                          <div class="row">
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <label class="col-md-8 control-label">SMS Aboneliği</label>
-                                <div class="col-md-4"><input type="checkbox" name="user_smsok" id="user_smsok" value="yes" /></div>
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <label class="col-md-10 control-label" id="strRegionSMSSubscribed"><input type="hidden" name="OrjinalstrRegionSMSSubscribed" id="OrjinalstrRegionSMSSubscribed" value="$buro_muduru$ SMS Gönderebilsin" />Büro Müdürü SMS Gönderebilsin</label>
-                                <div class="col-md-2"><input type="checkbox" name="user_regionsmsok" id="user_regionsmsok" value="yes" /></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-12">
-                              <p class="form-control-static"></p>
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">GSM Numarası*</label>
-                            <div class="col-md-8"><input id="mobile" name="mobile" class="form-control input-md" type="text" placeholder="905xxxxxxxxx" value=""></div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">Telefon Numarası</label>
-                            <div class="col-md-8"><input id="telephone" name="telephone" class="form-control input-md" type="text" placeholder="90xxxxxxxxxx" value=""></div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-md-4 control-label">Faks Numarası</label>
-                            <div class="col-md-8"><input id="fax" name="fax" class="form-control input-md" type="text" value=""></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card card-primary">
-                        <div class="card-header">
-                          <h3 class="card-title">Fatura Adresi</h3>
-                        </div>
-                        <div class="card-body">
-                          <div class="form-group">
-                            <label class="col-md-4 control-label" for="address">Fatura Adresi</label>
-                            <div class="col-md-8"><textarea rows="3" cols="26" name="address" class="form-control" id="address"></textarea></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card card-primary">
-                        <div class="card-footer">
-                          <div class="float-right">
-                            <button type="button" id="btnLogin1" name="btnLogin1" class="btn btn-primary"><i class="fa fa-user"></i> Kayıt Ol</button>
-                          </div>
-                          <a href="https://www.ersag.com.tr/account.asp" class="button"><span>Geri Dön</span></a>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <input name="txtVerificationCode" id="txtVerificationCode" type="hidden" value="">
-                </form>
-              </div>
-              <script type="text/javascript">
-                var submitted = 0;
-
-                function doChange() {
-                  document.getElementById("do").value = "change";
-                  $('#frmRegister').submit();
-                }
-
-                function doSponsor() {
-                  document.getElementById("do").value = "sponsor";
-                  $('#frmRegister').submit();
-                }
-
-                function frmRegisterSubmit() {
-                  if (submitted == 0) {
-                    submitted = 1;
-                    document.getElementById("do").value = "save";
-                    $('#frmRegister').submit();
-                  }
-                }
-                jQuery(document).ready(function() {
-                  setVerificationCodeonSuccess(function() {
-                    $("#txtVerificationCode").val($('#txtAccountVerificationCode').val());
-                    frmRegisterSubmit();
-                  });
-                  $("#password1").on('keyup', function() {
-                    checkPasswordStrength($(this).val().trim(), $("#password-strength-status"));
-                  });
-                  $('#btnLogin1').on('click', function() {
-                    $("#ModalVerificationCode").modal();
-                  });
-                  $("#ModalVerificationCode").on('shown.bs.modal', function(e) {
-                    setVerificationCodeMobileNumber($("#mobile").val());
-                    sendVerificationCode();
-                  });
-                  $('#sponsor').on('blur', function() {
-                    doSponsor();
-                  })
-                  $('#chaptaimg').click(function() {
-                    var now = new Date(),
-                      imgsrc = $(this).attr('src');
-                    $(this).attr('src', imgsrc.split('?')[0] + '?x=' + now.toUTCString());
-                  });
-                  $('#marialstatus').change(function() {
-                    if (this.selectedIndex == 2) {
-                      $('#trpartnername').show(300);
-                    } else {
-                      if ($('#trpartnername').is(':visible')) {
-                        $('#trpartnername').hide(300);
-                      }
-                    }
-                  })
-                  $('input[name="hesaptipi"]:radio').change(function() {
-                    $('div[id^="hesap_detay"]').hide(300);
-                    $('#hesap_detay' + $(this).val().toString()).show(300);
-                  });
-                  $('#user_country').change(function() {
-                    infoListChange("1", "", $('#user_country').val(), "", function(data) {
-                      parseJSONtoForm({
-                        "user_city": data
-                      });
-                    })
-                  });
-                  $('#user_city').change(function() {
-                    infoListChange("3", "", $('#user_city').val(), "", function(data) {
-                      $('#divcounty').toggle(data != '' || $('#user_country').val() == "TÜRKİYE");
-                      parseJSONtoForm({
-                        "user_county": data
-                      });
-                    })
-                  });
-                  if ($('#user_country').val() != "") {
-                    infoListChange("1", "", $('#user_country').val(), "", function(data) {
-                      parseJSONtoForm({
-                        "user_city": data
-                      });
-                    })
-                    infoListChange("1", "", $('#user_city').val(), "", function(data) {
-                      $('#divcounty').toggle(data != '' || $('#user_country').val() == "TÜRKİYE");
-                      parseJSONtoForm({
-                        "user_county": data
-                      });
-                    })
-                  }
-                  /*
-                  $('#dateofbirth').datetimepicker({
-                  format: 'L'
-                  });
-                  */
-                  $('#dateofbirth').inputmask('dd/mm/yyyy', {
-                    'placeholder': 'dd/mm/yyyy'
-                  })
-                });
-              </script>
-            </div>
-          </div>
-        </div>
-        <!-- /.row -->
-
-      </div><!-- /.container-fluid -->
-    </div>
-  </div>
-  <footer class="main-footer"></footer>
-  </div>
-</body>
-
-<div class="modal fade modal-fullscreen" id="ModalWithIframe">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="ModalWithIframeTitle"></h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body" id="ModalWithIframeBody"></div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="ModalVerificationCode" tabindex="-1" role="dialog">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Üye Doğrulama</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <i id="VerificationCodeLoading" class="fa fa-spinner fa-spin" style="font-size:24px; display:none;"></i>
-        <i id="VerificationCodeError" class="fa fa-exclamation-triangle" style="font-size:24px;color:red; display:none;"></i>
-
-        <div id="VerificationCodeHiddenDiv">
-          <div class="form-group">
-            <p>Sistemde kayıtlı olan cep telefonunuza gelen kodu aşağıdaki alana giriniz. Kodun girilmesi için süre yoktur. İşlem yoğunluğuna göre kodun gelmesi zaman alabilir. Telefonunuza bir kod gelmediyse bekleyebilir ya da 10 sn sonra "Yenile" butonuna basabilirsiniz.</p>
-          </div>
-          <div class="form-group">
-            <div>
-              <input type="hidden" name="txtverifymobile" id="txtverifymobile" value="" />
-              <input name="txtAccountVerificationCode" id="txtAccountVerificationCode" class="form-control input" size="5" placeholder="Doğrulama veya Aktivasyon Kodu" type="number">
-            </div>
-          </div>
-        </div>
-        <!--userForm-->
-      </div>
-      <div class="modal-footer">
-        <button id="btnVerificationRefresh" class="btn btn-lg btn-default" onclick="sendVerificationCode()" type="button">Yenile</button>
-        <input id="btnVerificationSubmit" name="button" class="btn btn-lg btn-primary" onclick="checkVerificationCode();" value="Devam Et" type="button">
-      </div>
-    </div>
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog -->
-</div>
-<div class="gap"></div>
-<div class="modal fade" id="kargomnerede">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Kargom Nerede?</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <iframe id="kargomneredeiframe" src="about:blank" style="width:99%; height:300px; background-color:#ffffff;" frameborder="0"></iframe>
-      </div>
-    </div>
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog -->
-</div>
-
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jquery-ui/jquery-ui.min.js"></script>
-<script type="text/javascript">
-  $.widget.bridge('uibutton', $.ui.button)
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,{"name":"heading","qid":"1","text":"ERSAG UYELIK FORMU","type":"control_head"},{"name":"submit2","qid":"2","text":"Gonder","type":"control_button"},null,null,null,{"name":"sponsorAdi","qid":"6","text":"SPONSOR ADI: ABIDE TAN","type":"control_head"},null,null,{"description":"","name":"uyeKisisel","qid":"9","text":"UYE KISISEL BILGILERI","type":"control_fullname"},null,{"description":"","name":"dogumTarihi","qid":"11","text":"DOGUM TARIHI","type":"control_datetime"},null,{"description":"","name":"tcKimlik","qid":"13","subLabel":"","text":"TC KIMLIK NUMARASI","type":"control_number"},null,null,null,null,{"description":"","name":"bulunduguUlke","qid":"18","subLabel":"","text":"BULUNDUGU ULKE","type":"control_dropdown"},null,null,null,null,null,{"description":"","name":"telefonNumarasi","qid":"24","text":"Telefon Numarasi","type":"control_phone"},{"description":"","name":"adres","qid":"25","text":"Adres","type":"control_address"},null,null,null,null,null,null,{"description":"","name":"sifre","qid":"32","subLabel":"","text":"SIFRE ","type":"control_textbox"},null,{"description":"","name":"sifretekrar","qid":"34","subLabel":"","text":"SIFRE (TEKRAR)","type":"control_textbox"}]);}, 20); 
 </script>
-<!-- Bootstrap 4 -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/moment/moment.min.js"></script>
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- Select2 -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/select2/js/select2.full.min.js"></script>
-<!-- Bootstrap4 Duallistbox -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
-<!-- InputMask -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/moment/moment.min.js"></script>
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/inputmask/jquery.inputmask.min.js"></script>
-<!-- date-range-picker -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/daterangepicker/daterangepicker.js"></script>
-<!-- bootstrap color picker -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
-<!-- Bootstrap Switch -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
-<!-- BS-Stepper -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bs-stepper/js/bs-stepper.min.js"></script>
-<!-- dropzonejs -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/dropzone/min/dropzone.min.js"></script>
-<!-- Ekko Lightbox -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/stylebuilder/static/form-common.css?v=3ff9d3e
+"/>
+<style type="text/css">@media print{*{-webkit-print-color-adjust: exact !important;color-adjust: exact !important;}.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.59832"/>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_styles.css?3.3.59832" />
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_feature.css?3.3.59832" />
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
 
-<link rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jqtree/monokai.css" type="text/css" />
-<link rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jqtree/jqtree.css" type="text/css" />
-<link rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jqtree/example.css" type="text/css" />
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jqtree/tree.jquery.js"></script>
+/* Begining of advanced designer */
+/*PREFERENCES STYLE*/
+/*  1 - Preferences style */
+/*  1 - FONT FAMILY */
+.form-all {
+  font-family: "Inter", sans-serif;
+}
+/* 2 - FORM WIDTH */
+.form-all {
+  max-width: 752px;
+}
+/* 5 - FONT SIZE */
+.form-all {
+  font-size: 16px;
+}
+/* 5 - input bg color */
+.form-textbox,
+.form-textarea,
+.form-radio-other-input,
+.form-checkbox-other-input,
+.form-captcha input,
+.form-spinner input {
+  background-color: #ffffff;
+}
+/* 10 - LINE SPACING */
+.form-line {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.supernova .form-all,
+.form-all {
+  background-color: #fff9bd;
+}
+.supernova {
+  background-color: #f06233;
+}
+.supernova body {
+  background-color: transparent;
+}
+.form-all,
+.form-label-top,
+.form-label-left,
+.form-label-right,
+.form-html,
+.form-checkbox-item label,
+.form-radio-item label,
+span.FITB .qb-checkbox-label,
+span.FITB .qb-radiobox-label,
+span.FITB .form-radio label,
+span.FITB .form-checkbox label,
+[data-blotid][data-type=checkbox] [data-labelid],
+[data-blotid][data-type=radiobox] [data-labelid],
+span.FITB-inptCont[data-type=checkbox] label,
+span.FITB-inptCont[data-type=radiobox] label,
+.form-sub-label {
+  color: #6b1b00;
+}
+/*PREFERENCES STYLE*/
+/* 17 - INPUT WIDTHS */
+/*  20 - FORM PADDING */
+ul.form-section {
+  padding: 0px 38px;
+}
+/* Heights */
+/* 11 - LINE PADDING */
+/* LABEL STYLE */
+/* 12 - ROUNDED INPUTS */
+.form-radio-item,
+.form-checkbox-item {
+  padding-bottom: 0px;
+}
+.form-radio-item:last-child,
+.form-checkbox-item:last-child {
+  padding-bottom: 0;
+}
+.form-checkbox-item .form-checkbox + label,
+.form-checkbox-item .form-checkbox + span {
+  padding-left: 30px;
+}
+.form-radio-item .form-radio + label,
+.form-radio-item .form-radio + span {
+  padding-left: 30px;
+}
+.form-single-column .form-checkbox-item,
+.form-single-column .form-radio-item {
+  width: 100%;
+}
+.form-checkbox-item .editor-container div,
+.form-radio-item .editor-container div {
+  position: relative;
+}
+.form-checkbox-item .editor-container div:before,
+.form-radio-item .editor-container div:before {
+  display: inline-block;
+  vertical-align: middle;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+.form-checkbox-item input,
+.form-radio-item input {
+  margin-top: 2px;
+}
+.form-checkbox:checked + label:before,
+.form-checkbox:checked + span:before {
+  background-color: #2e69ff;
+  border-color: #2e69ff;
+}
+.form-radio:checked + label:before,
+.form-radio:checked + span:before {
+  border-color: #2e69ff;
+}
+.form-radio:checked + label:after,
+.form-radio:checked + span:after {
+  background-color: #2e69ff;
+}
+.form-checkbox:hover + label:before,
+.form-checkbox:hover + span:before,
+.form-radio:hover + label:before,
+.form-radio:hover + span:before {
+  border-color: rgba(46, 105, 255, 0.5);
+  box-shadow: 0 0 0 2px rgba(46, 105, 255, 0.25);
+}
+.form-checkbox:focus + label:before,
+.form-checkbox:focus + span:before,
+.form-radio:focus + label:before,
+.form-radio:focus + span:before {
+  border-color: #2e69ff;
+  box-shadow: 0 0 0 3px rgba(46, 105, 255, 0.25);
+}
+.submit-button {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: inherit;
+}
+.submit-button {
+  min-width: 180px;
+}
+.form-all .form-pagebreak-back,
+.form-all .form-pagebreak-next {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+.form-all .form-pagebreak-back,
+.form-all .form-pagebreak-next {
+  min-width: 128px;
+}
+li[data-type="control_image"] div {
+  text-align: left;
+}
+li[data-type="control_image"] img {
+  border: none;
+  border-width: 0px !important;
+  border-style: solid !important;
+  border-color: false !important;
+}
+.supernova {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: auto;
+  background-size: cover;
+}
+.supernova {
+  background-image: none;
+}
+#stage {
+  background-image: none;
+}
+/* | */
+.form-all {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+}
+.form-header-group {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+}
+.header-large h1.form-header {
+  font-size: 2em;
+}
+.header-large h2.form-header {
+  font-size: 1.5em;
+}
+.header-large h3.form-header {
+  font-size: 1.17em;
+}
+.header-large h1 + .form-subHeader {
+  font-size: 1em;
+}
+.header-large h2 + .form-subHeader {
+  font-size: .875em;
+}
+.header-large h3 + .form-subHeader {
+  font-size: .75em;
+}
+.header-default h1.form-header {
+  font-size: 2em;
+}
+.header-default h2.form-header {
+  font-size: 1.5em;
+}
+.header-default h3.form-header {
+  font-size: 1.17em;
+}
+.header-default h1 + .form-subHeader {
+  font-size: 1em;
+}
+.header-default h2 + .form-subHeader {
+  font-size: .875em;
+}
+.header-default h3 + .form-subHeader {
+  font-size: .75em;
+}
+.header-small h1.form-header {
+  font-size: 2em;
+}
+.header-small h2.form-header {
+  font-size: 1.5em;
+}
+.header-small h3.form-header {
+  font-size: 1.17em;
+}
+.header-small h1 + .form-subHeader {
+  font-size: 1em;
+}
+.header-small h2 + .form-subHeader {
+  font-size: .875em;
+}
+.header-small h3 + .form-subHeader {
+  font-size: .75em;
+}
+.form-header-group {
+  text-align: left;
+}
+div.form-header-group.header-large,
+div.form-header-group.hasImage {
+  margin: 0px -38px;
+}
+div.form-header-group.header-large,
+div.form-header-group.hasImage {
+  padding: 40px 52px;
+}
+.form-header-group .form-header,
+.form-header-group .form-subHeader {
+  color: #6b1b00;
+}
+.form-line-error {
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -ms-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background-color: #ffd6d6;
+}
+.form-line-error .form-error-message {
+  background-color: #f23a3c;
+  clear: both;
+  float: none;
+}
+.form-line-error .form-error-message .form-error-arrow {
+  border-bottom-color: #f23a3c;
+}
+.form-line-error input:not(#coupon-input),
+.form-line-error textarea,
+.form-line-error .form-validation-error {
+  border: 1px solid #f23a3c;
+  box-shadow: 0 0 3px #f23a3c;
+}
+.form-line-error {
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -ms-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background-color: #ffd6d6;
+}
+.form-header-group .form-header,
+.form-header-group .form-subHeader {
+  color: #6b1b00;
+}
+.form-line-active {
+  background-color: #f1f5ff;
+}
+/* 29 - FORM COLUMNS */
 
-<!-- DataTables  & Plugins -->
-<script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jszip/jszip.min.js"></script>
-<script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/pdfmake/pdfmake.min.js"></script>
-<script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/pdfmake/vfs_fonts.js"></script>
-<script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+/*__INSPECT_SEPERATOR__*/
 
-<!-- jquery.treeview -->
-<link href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/treeview/jquery.treeview.css" rel="stylesheet" type="text/css" />
-<script type='text/javascript' src='//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/treeview/jquery.treeview.js'></script>
-<script type='text/javascript' src='//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/treeview/jquery.treeview.edit.js'></script>
-<script type='text/javascript' src='//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/treeview/jquery.treeview.async.js'></script>
-
-<!-- easycard -->
-<link rel="stylesheet" type="text/css" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/easycard/css/easycard.min.css">
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/easycard/js/easycard.js?v=1"></script>
-
-<!--VelocityJS -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/VelocityJS/VelocityJS.js"></script>
-
-<!--maxlength -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/maxlength/bootstrap-maxlength.js" type="text/javascript"></script>
-
-<!--eModal -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/eModal/dist/eModal.min.js" type="text/javascript"></script>
-
-<!-- ap-fullscreen-modal -->
-<link rel="stylesheet" type="text/css" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/ap-fullscreen/lib/css/ap-fullscreen-modal.min.css?v=1">
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/ap-fullscreen/lib/js/ap-fullscreen-modal.min.js"></script>
-
-<!--bootstrap-input-spinner -->
-<link href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap-touchspin/src/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" media="all">
-<script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap-touchspin/src/jquery.bootstrap-touchspin.js"></script>
-
-<!--qrcode -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/qrcode/qrcode.js"></script>
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/qrcode/jquery.qrcode.js"></script>
-
-<!--smart banner -->
-<link href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jquery.universal-smartbanner/jquery.ultimate-smartbanner.css" rel="stylesheet" type="text/css" media="all">
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jquery.universal-smartbanner/jquery.ultimate-smartbanner.js"></script>
-<style>
-  #smartbanner {
-    position: fixed;
-    top: unset;
-    bottom: 0 !important;
-    height: 120px;
-  }
+    /* Injected CSS Code */
 </style>
-<!-- AdminLTE App -->
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/dist/js/adminlte.js"></script>
-<script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/dist/js/ersag.js?v=16"></script>
 
-<script type="text/javascript">
-  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  const iosAppUrl = "ersag://";
-  const androidAppUrl = "intent://#Intent;scheme=ersag;package=com.ayfanet.ersag_mobile_app;end";
-  const appStoreUrl = "https://apps.apple.com/us/app/ersag/id6471481264";
-  const playStoreUrl = "https://play.google.com/store/apps/details?id=com.ayfanet.ersag_mobile_app";
-  jQuery(document).ready(function() {
-    $("#openInAppButton").on('click', function(e) {
-      e.preventDefault();
-      if (/android/i.test(userAgent)) {
-        window.location.href = androidAppUrl;
-        setTimeout(function() {
-          window.location.href = playStoreUrl;
-        }, 2000); // Eğer uygulama açılmazsa 2 saniye sonra Play Store'a yönlendirin.
-      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        window.location.href = iosAppUrl;
-        setTimeout(function() {
-          window.location.href = appStoreUrl;
-        }, 2000); // Eğer uygulama açılmazsa 2 saniye sonra App Store'a yönlendirin.
-      } else {
-        window.location.href = appStoreUrl;
-      }
-    });
-    $.smartbanner({
-      title: 'Mobil uygulamada açmak ister misiniz?', // What the title of the app should be in the banner (defaults to <title>)
-      author: null, // What the author of the app should be in the banner (defaults to <meta name="author"> or hostname)
-      price: '', // Price of the app
-      priceText: '', // Text of price for store
-      icon: null, // The URL of the icon (defaults to <meta name="apple-touch-icon">)
-      button: 'Aç', // Text for the install button
-      appStoreLanguage: 'tr', // Language code for iOS App Store
-      // Deprecated - replaced by 'priceText' and 'Device Configuration Specific' section :
-      inAppStore: '', // Text of price for iOS - iPhone
-      inGooglePlay: '', // Text of price for Android Phone
-      inWindowsStore: '', //Text of price for Windows Phone
-      iconGloss: null, // Force gloss CSS effect for iOS even for precomposed
-      // Technical config :
-      daysHidden: 15, // Duration to hide the banner after being closed (0 = always show banner)
-      daysReminder: 0, // Duration to hide the banner after "VIEW" is clicked *separate from when the close button is clicked* (0 = always show banner)
-      scale: 'auto', // Scale based on viewport size (set to 1 to disable)
-      container: 'body', // Container where the banner will be injected
-      force: null, // Choose 'ios', 'android' or 'windows'. Don't do a browser check, just always show this banner
-      // Device Configuration Specific - Use JSON datas who will surcharge the original datas :
-      iphoneConfig: null,
-      ipadConfig: null,
-      androidConfig: null,
-      androidTabsConfig: null,
-      windowsPhoneConfig: null,
-      windowsRtConfig: null
-    })
-  });
-</script>
+<form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="https://submit.jotform.com/submit/243604627584058" method="post" name="form_243604627584058" id="243604627584058" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="243604627584058" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" /><input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1735238352680" /><input type="hidden" id="submitSource" name="submitSource" value="unknown" /><input type="hidden" id="buildDate" name="buildDate" value="1735238352680" /><input type="hidden" name="uploadServerUrl" value="https://upload.jotform.com/upload" /><input type="hidden" name="eventObserver" value="1" />
+  <div id="formCoverLogo" style="margin-bottom:32px" class="form-cover-wrapper form-has-cover form-page-cover-image-align-center">
+    <div class="form-page-cover-image-wrapper" style="max-width:752px"><img src="https://www.jotform.com/uploads/kurtgulizar40/form_files/aaa.676c6b60bb9d45.46392093.jpg" class="form-page-cover-image" width="380" height="289" alt="ERSAG ÜYELİK FORMU Logo" style="aspect-ratio:380/289" /></div>
+  </div>
+  <div role="main" class="form-all">
+    <ul class="form-section page-section" role="presentation">
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httac htvam">
+            <h2 id="header_1" class="form-header" data-component="header">ERSAĞ ÜYELİK FORMU</h2>
+          </div>
+        </div>
+      </li>
+      <li id="cid_6" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httac htvam">
+            <h2 id="header_6" class="form-header" data-component="header">SPONSOR ADI: ABİDE TAN</h2>
+            <div id="subHeader_6" class="form-subHeader">SPONSOR NO : 1058609 GSM : 05462192846 </div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_fullname" id="id_9"><label class="form-label form-label-top form-label-auto" id="label_9" for="first_9" aria-hidden="false"> ÜYE KİŞİSEL BİLGİLERİ<span class="form-required">*</span> </label>
+        <div id="cid_9" class="form-input-wide jf-required" data-layout="full">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_9" name="q9_uyeKisisel[first]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_9 given-name" size="10" data-component="first" aria-labelledby="label_9 sublabel_9_first" required="" value="" /><label class="form-sub-label" for="first_9" id="sublabel_9_first" style="min-height:13px">Ad</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_9" name="q9_uyeKisisel[last]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_9 family-name" size="15" data-component="last" aria-labelledby="label_9 sublabel_9_last" required="" value="" /><label class="form-sub-label" for="last_9" id="sublabel_9_last" style="min-height:13px">Soyad</label></span></div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_number" id="id_13"><label class="form-label form-label-top form-label-auto" id="label_13" for="input_13" aria-hidden="false"> TC KİMLİK NUMARASI<span class="form-required">*</span> </label>
+        <div id="cid_13" class="form-input-wide jf-required" data-layout="half"> <input type="number" id="input_13" name="q13_tcKimlik" data-type="input-number" class=" form-number-input form-textbox validate[required]" data-defaultvalue="" style="width:310px" size="310" placeholder="örn. 23" data-component="number" aria-labelledby="label_13" required="" step="any" value="" /> </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_datetime" id="id_11"><label class="form-label form-label-top form-label-auto" id="label_11" for="lite_mode_11" aria-hidden="false"> DOĞUM TARİHİ<span class="form-required">*</span> </label>
+        <div id="cid_11" class="form-input-wide jf-required" data-layout="half">
+          <div data-wrapper-react="true">
+            <div style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input class="form-textbox validate[required, limitDate]" id="month_11" name="q11_dogumTarihi[month]" type="tel" size="2" data-maxlength="2" data-age="" maxLength="2" required="" autoComplete="off" aria-labelledby="label_11 sublabel_11_month" value="" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="month_11" id="sublabel_11_month" style="min-height:13px">Ay</label></span><span class="form-sub-label-container" style="vertical-align:top"><input class="form-textbox validate[required, limitDate]" id="day_11" name="q11_dogumTarihi[day]" type="tel" size="2" data-maxlength="2" data-age="" maxLength="2" required="" autoComplete="off" aria-labelledby="label_11 sublabel_11_day" value="" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="day_11" id="sublabel_11_day" style="min-height:13px">Gün</label></span><span class="form-sub-label-container" style="vertical-align:top"><input class="form-textbox validate[required, limitDate]" id="year_11" name="q11_dogumTarihi[year]" type="tel" size="4" data-maxlength="4" data-age="" maxLength="4" required="" autoComplete="off" aria-labelledby="label_11 sublabel_11_year" value="" /><label class="form-sub-label" for="year_11" id="sublabel_11_year" style="min-height:13px">Yıl</label></span></div><span class="form-sub-label-container" style="vertical-align:top"><input class="form-textbox validate[required, limitDate, validateLiteDate]" id="lite_mode_11" type="text" size="12" data-maxlength="12" maxLength="12" data-age="" required="" data-format="mmddyyyy" data-seperator="-" placeholder="AA-GG-YYYY" data-placeholder="MM-DD-YYYY" autoComplete="off" aria-labelledby="label_11 sublabel_11_litemode" value="" /><button type="button" class=" newDefaultTheme-dateIcon focusable icon-liteMode" id="input_11_pick" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2"></button><label class="form-sub-label" for="lite_mode_11" id="sublabel_11_litemode" style="min-height:13px">Tarih</label></span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_textbox" id="id_32"><label class="form-label form-label-top form-label-auto" id="label_32" for="input_32" aria-hidden="false"> ŞİFRE <span class="form-required">*</span> </label>
+        <div id="cid_32" class="form-input-wide jf-required" data-layout="half"> <input type="text" id="input_32" name="q32_sifre" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_32" required="" value="" /> </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_textbox" id="id_34"><label class="form-label form-label-top form-label-auto" id="label_34" for="input_34" aria-hidden="false"> ŞİFRE (TEKRAR)<span class="form-required">*</span> </label>
+        <div id="cid_34" class="form-input-wide jf-required" data-layout="half"> <input type="text" id="input_34" name="q34_sifretekrar" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_34" required="" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_phone" id="id_24"><label class="form-label form-label-top form-label-auto" id="label_24" for="input_24_full"> Telefon Numarası </label>
+        <div id="cid_24" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_24_full" name="q24_telefonNumarasi[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_24 tel-national" style="width:310px" data-masked="true" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_24 sublabel_24_masked" value="" /><label class="form-sub-label" for="input_24_full" id="sublabel_24_masked" style="min-height:13px">Lütfen geçerli bir telefon numarası girin.</label></span> </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_dropdown" id="id_18"><label class="form-label form-label-top form-label-auto" id="label_18" for="input_18" aria-hidden="false"> BULUNDUĞU ÜLKE<span class="form-required">*</span> </label>
+        <div id="cid_18" class="form-input-wide jf-required" data-layout="half"> <select class="form-dropdown validate[required]" id="input_18" name="q18_bulunduguUlke" style="width:310px" data-component="dropdown" required="" aria-label="BULUNDUĞU ÜLKE">
+            <option value="">Lütfen Seçin</option>
+            <option value="DİĞER">DİĞER</option>
+            <option value="TÜRKİYE">TÜRKİYE</option>
+          </select> </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_address" id="id_25" data-compound-hint=",,,,Lütfen Seçin,,Lütfen Seçin,"><label class="form-label form-label-top form-label-auto" id="label_25" for="input_25_addr_line1" aria-hidden="false"> Adres<span class="form-required">*</span> </label>
+        <div id="cid_25" class="form-input-wide jf-required" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_25_addr_line1" name="q25_adres[addr_line1]" class="form-textbox validate[required] form-address-line" data-defaultvalue="" autoComplete="section-input_25 address-line1" data-component="address_line_1" aria-labelledby="label_25 sublabel_25_addr_line1" required="" value="" /><label class="form-sub-label" for="input_25_addr_line1" id="sublabel_25_addr_line1" style="min-height:13px">Adres Satırı 1</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_25_addr_line2" name="q25_adres[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_25 address-line2" data-component="address_line_2" aria-labelledby="label_25 sublabel_25_addr_line2" value="" /><label class="form-sub-label" for="input_25_addr_line2" id="sublabel_25_addr_line2" style="min-height:13px">Adres Satırı 2</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_25_city" name="q25_adres[city]" class="form-textbox validate[required] form-address-city" data-defaultvalue="" autoComplete="section-input_25 address-level2" data-component="city" aria-labelledby="label_25 sublabel_25_city" required="" value="" /><label class="form-sub-label" for="input_25_city" id="sublabel_25_city" style="min-height:13px">İlçe</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_25_state" name="q25_adres[state]" class="form-textbox validate[required] form-address-state" data-defaultvalue="" autoComplete="section-input_25 address-level1" data-component="state" aria-labelledby="label_25 sublabel_25_state" required="" value="" /><label class="form-sub-label" for="input_25_state" id="sublabel_25_state" style="min-height:13px">İl / Eyalet</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_25_postal" name="q25_adres[postal]" class="form-textbox validate[required] form-address-postal" data-defaultvalue="" autoComplete="section-input_25 postal-code" data-component="zip" aria-labelledby="label_25 sublabel_25_postal" required="" value="" /><label class="form-sub-label" for="input_25_postal" id="sublabel_25_postal" style="min-height:13px">Posta Kodu</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_button" id="id_2">
+        <div id="cid_2" class="form-input-wide" data-layout="full">
+          <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button id="input_2" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField legacy-submit" data-component="button" data-content="">Gönder</button></div>
+        </div>
+      </li>
+      <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" /></li>
+    </ul>
+  </div>
+  <script>
+    JotForm.showJotFormPowered = "new_footer";
+  </script>
+  <script>
+    JotForm.poweredByText = "Jotform Tarafından Desteklenmektedir";
+  </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="243604627584058" />
+  <script type="text/javascript">
+    var all_spc = document.querySelectorAll("form[id='243604627584058'] .si" + "mple" + "_spc");
+    for (var i = 0; i < all_spc.length; i++)
+    {
+      all_spc[i].value = "243604627584058-243604627584058";
+    }
+  </script>
+</form>
+<link id=color-scheme-style href="https://cdn01.jotfor.ms/stylebuilder/static/color-scheme.css?v=3.3.59832" type="text/css" rel="stylesheet" /><script type="text/javascript">JotForm.ownerView=true;</script><script type="text/javascript">JotForm.isNewSACL=true;</script>
 
-</html>
-
-
-    <a
-      href="javascript:void(
-        window.open(
-          'https://form.jotform.com/243604627584058',
-          'blank',
-          'scrollbars=yes,
-          toolbar=no,
-          width=700,
-          height=500'
-        )
-      )
-    ">
