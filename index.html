@@ -1,143 +1,54 @@
 <!DOCTYPE html>
-<html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ersag Üyelik Formu</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        display: grid;
-        place-items: center;
-        height: 100vh;
-        width: 100vw;
-      }
-      .container {
-        max-width: 400px;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      .header {
-        text-align: center;
-        margin-bottom: 20px;
-      }
+<html lang="en">
 
-      .header h1 {
-        color: orange;
-      }
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1254">
+  <META http-equiv="Content-Language" content="tr" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ersağ Temizlik ve Kozmetik Ürünleri Resmi Web Sitesi</title>
+  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  <META HTTP-EQUIV="Expires" CONTENT="-1">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//dosya.ersag.com.tr/yukleme/tema/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//dosya.ersag.com.tr/yukleme/tema/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//dosya.ersag.com.tr/yukleme/tema/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="//https://www.ersag.com.tr/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor=4442916
+                                                 
+  <link rel="shortcut icon" href="//dosya.ersag.com.tr/yukleme/tema/ico/favicon.png">
 
-      label {
-        font-weight: bold;
-        display: block;
-        margin: 10px 0 5px;
-      }
+  <meta name="author" content="ERSAĞ">
+  <meta name="apple-itunes-app" content="app-id=6471481264">
+  <meta name="google-play-app" content="app-id=com.ayfanet.ersag_mobile_app">
+  <meta name="apple-itunes-app-tracking" content="">
+  <meta name="google-play-app-tracking" content="intent://#Intent;scheme=ersag;package=com.ayfanet.ersag_mobile_app;end">
 
-      input,
-      textarea {
-        width: 95%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-  button {
-        width: 100%;
-        padding: 10px;
-        background-color: orange;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: darkorange;
-      }
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/sponsor:4442916/account/adminlte/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
-      .btn-group {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 5px;
-        gap: 5px;
-      }
+  <!-- bootstrap 4 -->
+  <link type="text/css" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link type="text/css" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap/fonts/glyphicons.css" rel="stylesheet" type="text/css" />
 
-      .btn-group a {
-        text-decoration: none;
-        padding: 10px;
-        background-color: orange;
-        color: white;
-        border-radius: 5px;
-        text-align: center;
-        width: 48%;
-        display: inline-block;
-      }
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jqvmap/jqvmap.min.css">
+  <!-- Ekko Lightbox -->
+  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/ekko-lightbox/ekko-lightbox.css">
+  <!-- Theme style -->
+  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/daterangepicker/daterangepicker.css">
 
-      .btn-group a:hover {
-        background-color: darkorange;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <img src="images.jpg" />
-      <div class="header">
-        <h1>Ersag Üyelik Formu</h1>
-        <meta http-equiv="Content-Type" content="text/html;charset=windows-1254">
-    <META http-equiv="Content-Language" content="tr" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ersağ Temizlik ve Kozmetik Ürünleri Resmi Web Sitesi</title>
-    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
-    <META HTTP-EQUIV="Expires" CONTENT="-1">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//dosya.ersag.com.tr/yukleme/tema/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//dosya.ersag.com.tr/yukleme/tema/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//dosya.ersag.com.tr/yukleme/tema/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="//dosya.ersag.com.tr/yukleme/tema/ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="//dosya.ersag.com.tr/yukleme/tema/ico/favicon.png">
-    
-    <meta name="author" content="ERSAĞ">
-    <meta name="apple-itunes-app" content="app-id=6471481264">
-    <meta name="google-play-app" content="app-id=com.ayfanet.ersag_mobile_app">
-    <meta name="apple-itunes-app-tracking" content="">
-    <meta name="google-play-app-tracking" content="intent://#Intent;scheme=ersag;package=com.ayfanet.ersag_mobile_app;end">
-    
-        
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/fontawesome-free/css/all.min.css">
-    <!-- Ionicons -->
-    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-
-    <!-- bootstrap 4 -->
-    <link type="text/css" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link type="text/css" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap/fonts/glyphicons.css" rel="stylesheet" type="text/css" />
-
-    <!-- Tempusdominus Bootstrap 4 -->
-    <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-    <!-- iCheck -->
-    <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-    <!-- JQVMap -->
-    <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jqvmap/jqvmap.min.css">
-    <!-- Ekko Lightbox -->
-    <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/ekko-lightbox/ekko-lightbox.css">
-    <!-- Theme style -->
-    <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/dist/css/adminlte.min.css">
-    <!-- overlayScrollbars -->
-    <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-    <!-- Daterange picker -->
-    <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/daterangepicker/daterangepicker.css">
-
-    <!-- summernote -->
-    <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/summernote/summernote-bs4.min.css">
+  <!-- summernote -->
+  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/summernote/summernote-bs4.min.css">
   <!-- Bootstrap Color Picker -->
   <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
   <!-- Select2 -->
@@ -150,12 +61,25 @@
   <!-- dropzonejs -->
   <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/dropzone/min/dropzone.min.css">
 
-    <!-- ersag -->
-    <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/dist/css/ersag.css?v=7">
-    <!-- jQuery -->
-    <script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jquery/jquery-migrate-1.2.1.js"></script>
-    
+  <!-- ersag -->
+  <link type="text/css" rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/dist/css/ersag.css?v=7">
+  <!-- jQuery -->
+  <script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jquery/jquery-migrate-1.2.1.js"></script>
+  <style type="text/css">
+    #spinner-div {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 1000000;
+    }
+  </style>
+
 </head>
 <div id="spinner-div" class="pt-5">
   <div class="spinner-border text-primary" role="status">
@@ -163,422 +87,478 @@
 </div>
 
 <body class="hold-transition layout-top-nav">
-<div class="wrapper">
-  <nav class="main-header navbar navbar-expand navbar-dark navbar-cyan">
-    <div class="container">
-     <a href="https://www.ersag.com.tr/account.asp" class="navbar-brand">
-      <img src="//dosya.ersag.com.tr/yukleme/tema/images/logo_account.png" style="opacity: .8">
-      </a>
-      <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-        <li class="nav-item dropdown">
+  <div class="wrapper">
+    <nav class="main-header navbar navbar-expand navbar-dark navbar-cyan">
+      <div class="container">
+        <a href="https://www.ersag.com.tr/account.asp" class="navbar-brand">
+          <img src="//dosya.ersag.com.tr/yukleme/tema/images/logo_account.png" style="opacity: .8">
+        </a>
+        <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+          <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
-               <i class="fas fa-globe"></i>
+              <i class="fas fa-globe"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                 <a href="?language_id=8" class="dropdown-item">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a> <a href="?language_id=6" class="dropdown-item">English</a>         
+              <a href="?language_id=8" class="dropdown-item">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a> <a href="?language_id=6" class="dropdown-item">English</a>
             </div>
-        </li>
-        <li class="nav-item">
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="https://www.ersag.com.tr/account.asp" role="button">
-                <i class="fas fa-home"></i>
+              <i class="fas fa-home"></i>
             </a>
-        </li>
-        <li class="nav-item">
+          </li>
+          <li class="nav-item">
             <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-                <i class="fas fa-expand-arrows-alt"></i>
+              <i class="fas fa-expand-arrows-alt"></i>
             </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="content-wrapper">
-    <div class="content">
-      <div class="container">
-<section class="content-header">
-    <div class="container">
-        <div class="row mb-2">
-            <div class="col-sm-6">
-            <h1>Üye Ol</h1>
-            </div>
-        </div>
-    </div><!-- /.container-fluid -->
-</section>
-<div class="content">
-    <div class="container">
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="container">
+          <section class="content-header">
+            <div class="container">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1>Üye Ol</h1>
+                </div>
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+          <div class="content">
+            <div class="container">
 
-<div class="row">         
+              <div class="row">
 
+                <div class="col-12">
+                  <div class="alert alert-info"><sup>*</sup> Gerekli Alanlar</div>
+                  <form action="/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor=" method="post" name="frmRegister" id="frmRegister" class="form-horizontal">
+                    <input type="hidden" name="do" id="do" value="save" /><input type="hidden" name="ickoruma" id="ickoruma" value="1433142" />
 
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="card card-primary">
+                          <div class="card-header">
+                            <h3 class="card-title">Sponsor Bilgileri</h3>
+                            <p><strong>Adı:</strong> <span class="highlight">Gulızar Kurt</span></p>
+                            <p><strong>sponsor kodu:</strong>
+                              <span class_"higlight">4442916</span>
+                            </p>
 
-<div class="col-12">
-   
-                <h3 class="card-title">Sponsor Bilgileri</h3>
-            </div>
-            <div class="card-body">
-              <div class="form-group">
-                  <label for="sponsor">Sponsor Numarası</label>
-                    <div class="input-group">
-                        <input name="sponsor" class="form-control " type="number" id="sponsor" value="4442916">                        
-                        <div class="input-group-append">
-                            <div class="input-group-text"><a href="#" onclick="doSponsor()">Numarayı Kontrol Et</a></div>
+                            <strong>iletisim numarası:</strong>
+                            <span class="higlight">05421274017</span></p>
+                            <p>bu sponsor üzerinden üye oldunuz. sorularınız için iletişime geçiniz.</p>
+<div id=”social-links”>
+<p>sosyal medyada takip edin:</p>
+<a  href=”http:/www.instagram.com/kalbiahsen73” 
+target=”_blank”>
+<img src=”instagram-icon.png”
+Alt=”Instagram” style=”width:24px;”>
+</a>
+</div><script>
+                            <div </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label>Adı Soyadı</label>
+                            <div class="col-md-8">
+                              <p class="form-control-static" id="sponsor_name"> </p>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label>Kariyeri</label>
+                            <div class="col-md-8">
+                              <p class="form-control-static" id="sponsor_groupname"></p>
+                            </div>
+                          </div>
                         </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Adı Soyadı</label>
-                    <div class="col-md-8"><p class="form-control-static" id="sponsor_name">GÜLİZAR KURT</p></div>
-                </div>
-                <div class="form-group">
-                    <label>Kariyeri</label>
-                    <div class="col-md-8"><p class="form-control-static" id="sponsor_groupname">ÖNCÜ YARDIMCISI</p></div>
-                </div>
-            </div>
-        </div>
+                      </div>
 
-        <div class="card card-primary">
-            <div class="card-header">
-                <h3 class="card-title">Kişisel Bilgiler</h3>
-            </div>
-            <div class="card-body">
-                        <div class="form-group">
+                      <div class="card card-primary">
+                        <div class="card-header">
+                          <h3 class="card-title">Kişisel Bilgiler</h3>
+                        </div>
+                        <div class="card-body">
+                          <div class="form-group">
                             <label class="col-md-4 control-label" for="sponsor">Kimlik Numarası *</label>
                             <div class="col-md-8">
-                                <input name="identitynumber" class="form-control" type="text" id="identitynumber" value="">
-                                <span class="help-block">Avrupadan üye olanlar lütfen pasaport ya da bulunduğu ülkenin kimlik numarasını giriniz. Mükerrer üye karışımını önlemek adına istenmektedir.</span>
+                              <input name="identitynumber" class="form-control" type="text" id="identitynumber" value="">
+                              <span class="help-block">Avrupadan üye olanlar lütfen pasaport ya da bulunduğu ülkenin kimlik numarasını giriniz. Mükerrer üye karışımını önlemek adına istenmektedir.</span>
                             </div>
-                        </div>
-                        <div class="form-group">
+                          </div>
+                          <div class="form-group">
                             <label class="col-md-4 control-label">Adı *</label>
                             <div class="col-md-8"><input id="firstname" name="firstname" class="form-control input-md " type="text" value=""></div>
-                        </div>
-                        <div class="form-group">
+                          </div>
+                          <div class="form-group">
                             <label class="col-md-4 control-label">Soyadı *</label>
                             <div class="col-md-8"><input id="lastname" name="lastname" class="form-control input-md" type="text" value=""></div>
-                        </div>
-                        <div class="form-group">
+                          </div>
+                          <div class="form-group">
                             <label class="col-md-4 control-label">Doğum Tarihi *</label>
                             <div class="input-group date col-md-8 datepicker">
-                                <input type="text" class="form-control " name="dateofbirth" id="dateofbirth" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" inputmode="numeric" value="">
-                                <!--
+                              <input type="text" class="form-control " name="dateofbirth" id="dateofbirth" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" inputmode="numeric" value="">
+                              <!--
                                 <input type="text" name="dateofbirth" class="form-control datetimepicker-input " data-target="#dateofbirth" value="">
                                 -->
-                                <div class="input-group-append" data-target="#dateofbirth" data-toggle="datepicker">
-                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                </div>
+                              <div class="input-group-append" data-target="#dateofbirth" data-toggle="datepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                              </div>
                             </div>
-                        </div>
-                        <div class="form-group">
+                          </div>
+                          <div class="form-group">
                             <label class="col-md-4 control-label">Medeni Durumu *</label>
-                            <div class="col-md-8"><select id="marialstatus" name="marialstatus" class="form-control"><option value='0' selected>Seçiniz</option><option value='1' >Bekar</option><option value='2' >Evli</option><option value='3' >Boşanmış</option></select></div>
-                        </div>
-                        <div class="form-group" id="trpartnername" style="display:none;" >
+                            <div class="col-md-8"><select id="marialstatus" name="marialstatus" class="form-control">
+                                <option value='0'>Seçiniz</option>
+                                <option value='1'>Bekar</option>
+                                <option value='2'>Evli</option>
+                                <option value='3'>Boşanmış</option>
+                              </select></div>
+                          </div>
+                          <div class="form-group" id="trpartnername" style="display:none;">
                             <label class="col-md-4 control-label">Eşinin Adı *</label>
                             <div class="col-md-8"><input id="partnername" name="partnername" class="form-control input-md" type="text" value=""></div>
-                        </div>
-                        <div class="form-group">
+                          </div>
+                          <div class="form-group">
                             <label class="col-md-4 control-label">İşi *</label>
                             <div class="col-md-8"><input id="job" name="job" class="form-control input-md" type="text" value=""></div>
-                        </div>
-                        <div class="form-group">
+                          </div>
+                          <div class="form-group">
                             <label class="col-md-4 control-label">Dili *</label>
-                            <div class="col-md-8"><select name="user_lang_id" id="user_lang_id"  class="form-control"><option value='4' selected>Türkçe</option><option value='6' >English</option><option value='8' >&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</option></select></div>
+                            <div class="col-md-8"><select name="user_lang_id" id="user_lang_id" class="form-control">
+                                <option value='4'>Türkçe</option>
+                                <option value='6'>English</option>
+                                <option value='8'>&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</option>
+                              </select></div>
+                          </div>
                         </div>
+                      </div>
+
+                      <div class="card card-primary">
+                        <div class="card-header">
+                          <h3 class="card-title">Şifre Bilgileri</h3>
+                        </div>
+                        <div class="card-body">
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Şifre *</label>
+                            <div class="col-md-8"><input id="password1" name="password1" class="form-control input-md" type="password" value=""></div>
+                          </div>
+                          <div class="form-group">
+                            <div id="password-strength-status" class="col-md-12" data-weaktext="Zayıf (En az 6 karakter olmalıdır.)" data-mediumtext="Orta (Harf, sayı ve özel karakterler içermelidir.)" data-strongtext="Güçlü"> </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Şifre (Tekrar) *</label>
+                            <div class="col-md-8"><input id="password2" name="password2" class="form-control input-md" type="password" value=""></div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="card card-primary">
+                        <div class="card-header">
+                          <h3 class="card-title">Hesap Bilgileri</h3>
+                        </div>
+                        <div class="card-body">
+
+                          <div class="form-group clearfix">
+                            <div class="icheck-primary d-inline">
+                              <input type="radio" id="hesaptipi0" name="hesaptipi" value="0" checked />
+                              <label for="hesaptipi0">Banka</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                              <input type="radio" id="hesaptipi1" name="hesaptipi" value="1" />
+                              <label for="hesaptipi1">PTT</label>
+                            </div>
+                          </div>
+                          <div id="hesap_detay0">
+                            <div class="form-group">
+                              <label class="col-md-4 control-label">Banka Adı *</label>
+                              <div class="col-md-8"><input id="bankname" name="bankname" class="form-control input-md" type="text" value=""></div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-md-4 control-label">IBAN Nu *</label>
+                              <div class="col-md-8"><input id="accountnumber" name="accountnumber" class="form-control input-md" type="text" value=""><span class="help-block">Şirketimiz tarafından hak edilmiş primlerinizin kendi hesabınıza gönderilmesi için istenmektedir.</span></div>
+                            </div>
+                          </div>
+                          <div id="hesap_detay1" style="display:none;">
+                            <div class="form-group">
+                              <label class="col-md-4 control-label">PTT Hesap No *</label>
+                              <div class="col-md-8"><input id="pttnu" name="pttnu" class="form-control input-md" type="text" value=""></div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="card card-primary">
+                        <div class="card-header">
+                          <h3 class="card-title">Erişim Bilgileri</h3>
+                        </div>
+                        <div class="card-body">
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Bulunduğu Ülke *</label>
+                            <div class="col-md-8"><select name="user_country" id="user_country" class="form-control">
+                                <option>Seçiniz</option>
+                                <option value="DİĞER">D&#304;&#286;ER</option>
+                                <option value="TÜRKİYE" selected>T&#220;RK&#304;YE</option>
+                              </select></div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Bulunduğu İl *</label>
+                            <div class="col-md-8"><select name="user_city" id="user_city" class="form-control"></select></div>
+                          </div>
+                          <div class="form-group" id="divcounty">
+                            <label class="col-md-4 control-label">Bulunduğu İlçe *</label>
+                            <div class="col-md-8"><select name="user_county" id="user_county" class="form-control"></select></div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">EPosta Aboneliği</label>
+                            <div class="col-md-8"><input type="checkbox" name="user_emailok" id="user_emailok" value="yes" checked /></div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Eposta</label>
+                            <div class="col-md-8"><input id="email" name="email" class="form-control input-md" type="text" value=""></div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label class="col-md-8 control-label">SMS Aboneliği</label>
+                                <div class="col-md-4"><input type="checkbox" name="user_smsok" id="user_smsok" value="yes" /></div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label class="col-md-10 control-label" id="strRegionSMSSubscribed"><input type="hidden" name="OrjinalstrRegionSMSSubscribed" id="OrjinalstrRegionSMSSubscribed" value="$buro_muduru$ SMS Gönderebilsin" />Büro Müdürü SMS Gönderebilsin</label>
+                                <div class="col-md-2"><input type="checkbox" name="user_regionsmsok" id="user_regionsmsok" value="yes" /></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <p class="form-control-static"></p>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">GSM Numarası*</label>
+                            <div class="col-md-8"><input id="mobile" name="mobile" class="form-control input-md" type="text" placeholder="905xxxxxxxxx" value=""></div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Telefon Numarası</label>
+                            <div class="col-md-8"><input id="telephone" name="telephone" class="form-control input-md" type="text" placeholder="90xxxxxxxxxx" value=""></div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Faks Numarası</label>
+                            <div class="col-md-8"><input id="fax" name="fax" class="form-control input-md" type="text" value=""></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card card-primary">
+                        <div class="card-header">
+                          <h3 class="card-title">Fatura Adresi</h3>
+                        </div>
+                        <div class="card-body">
+                          <div class="form-group">
+                            <label class="col-md-4 control-label" for="address">Fatura Adresi</label>
+                            <div class="col-md-8"><textarea rows="3" cols="26" name="address" class="form-control" id="address"></textarea></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card card-primary">
+                        <div class="card-footer">
+                          <div class="float-right">
+                            <button type="button" id="btnLogin1" name="btnLogin1" class="btn btn-primary"><i class="fa fa-user"></i> Kayıt Ol</button>
+                          </div>
+                          <a href="https://www.ersag.com.tr/account.asp" class="button"><span>Geri Dön</span></a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <input name="txtVerificationCode" id="txtVerificationCode" type="hidden" value="">
+                </form>
+              </div>
+              <script type="text/javascript">
+                var submitted = 0;
+
+                function doChange() {
+                  document.getElementById("do").value = "change";
+                  $('#frmRegister').submit();
+                }
+
+                function doSponsor() {
+                  document.getElementById("do").value = "sponsor";
+                  $('#frmRegister').submit();
+                }
+
+                function frmRegisterSubmit() {
+                  if (submitted == 0) {
+                    submitted = 1;
+                    document.getElementById("do").value = "save";
+                    $('#frmRegister').submit();
+                  }
+                }
+                jQuery(document).ready(function() {
+                  setVerificationCodeonSuccess(function() {
+                    $("#txtVerificationCode").val($('#txtAccountVerificationCode').val());
+                    frmRegisterSubmit();
+                  });
+                  $("#password1").on('keyup', function() {
+                    checkPasswordStrength($(this).val().trim(), $("#password-strength-status"));
+                  });
+                  $('#btnLogin1').on('click', function() {
+                    $("#ModalVerificationCode").modal();
+                  });
+                  $("#ModalVerificationCode").on('shown.bs.modal', function(e) {
+                    setVerificationCodeMobileNumber($("#mobile").val());
+                    sendVerificationCode();
+                  });
+                  $('#sponsor').on('blur', function() {
+                    doSponsor();
+                  })
+                  $('#chaptaimg').click(function() {
+                    var now = new Date(),
+                      imgsrc = $(this).attr('src');
+                    $(this).attr('src', imgsrc.split('?')[0] + '?x=' + now.toUTCString());
+                  });
+                  $('#marialstatus').change(function() {
+                    if (this.selectedIndex == 2) {
+                      $('#trpartnername').show(300);
+                    } else {
+                      if ($('#trpartnername').is(':visible')) {
+                        $('#trpartnername').hide(300);
+                      }
+                    }
+                  })
+                  $('input[name="hesaptipi"]:radio').change(function() {
+                    $('div[id^="hesap_detay"]').hide(300);
+                    $('#hesap_detay' + $(this).val().toString()).show(300);
+                  });
+                  $('#user_country').change(function() {
+                    infoListChange("1", "", $('#user_country').val(), "", function(data) {
+                      parseJSONtoForm({
+                        "user_city": data
+                      });
+                    })
+                  });
+                  $('#user_city').change(function() {
+                    infoListChange("3", "", $('#user_city').val(), "", function(data) {
+                      $('#divcounty').toggle(data != '' || $('#user_country').val() == "TÜRKİYE");
+                      parseJSONtoForm({
+                        "user_county": data
+                      });
+                    })
+                  });
+                  if ($('#user_country').val() != "") {
+                    infoListChange("1", "", $('#user_country').val(), "", function(data) {
+                      parseJSONtoForm({
+                        "user_city": data
+                      });
+                    })
+                    infoListChange("1", "", $('#user_city').val(), "", function(data) {
+                      $('#divcounty').toggle(data != '' || $('#user_country').val() == "TÜRKİYE");
+                      parseJSONtoForm({
+                        "user_county": data
+                      });
+                    })
+                  }
+                  /*
+                  $('#dateofbirth').datetimepicker({
+                  format: 'L'
+                  });
+                  */
+                  $('#dateofbirth').inputmask('dd/mm/yyyy', {
+                    'placeholder': 'dd/mm/yyyy'
+                  })
+                });
+              </script>
             </div>
+          </div>
         </div>
-
-        <div class="card card-primary">
-            <div class="card-header">
-                <h3 class="card-title">Şifre Bilgileri</h3>
-            </div>
-            <div class="card-body">
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Şifre *</label>
-                    <div class="col-md-8"><input id="password1" name="password1" class="form-control input-md" type="password" value=""></div>
-                </div>
-                <div class="form-group">
-                    <div id="password-strength-status" class="col-md-12" data-weaktext="Zayıf (En az 6 karakter olmalıdır.)" data-mediumtext="Orta (Harf, sayı ve özel karakterler içermelidir.)" data-strongtext="Güçlü"> </div>  
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Şifre (Tekrar) *</label>
-                    <div class="col-md-8"><input id="password2" name="password2" class="form-control input-md" type="password" value=""></div>
-                </div>
-                		
-            </div>
-        </div>
-
-        <div class="card card-primary">
-            <div class="card-header">
-                <h3 class="card-title">Hesap Bilgileri</h3>
-            </div>
-            <div class="card-body">
-                
-                    <div class="form-group clearfix">
-                        <div class="icheck-primary d-inline">
-                            <input type="radio" id="hesaptipi0" name="hesaptipi" value="0" checked  />
-                            <label for="hesaptipi0">Banka</label>
-                        </div>
-                        <div class="icheck-primary d-inline">
-                            <input type="radio" id="hesaptipi1" name="hesaptipi" value="1"   />
-                            <label for="hesaptipi1">PTT</label>
-                        </div>
-                    </div>
-                    <div id="hesap_detay0" >
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">Banka Adı *</label>
-                            <div class="col-md-8"><input id="bankname" name="bankname" class="form-control input-md" type="text" value=""></div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">IBAN Nu *</label>
-                            <div class="col-md-8"><input id="accountnumber" name="accountnumber" class="form-control input-md" type="text" value=""><span class="help-block">Şirketimiz tarafından hak edilmiş primlerinizin kendi hesabınıza gönderilmesi için istenmektedir.</span></div>
-                        </div>                            
-                    </div>
-                    <div id="hesap_detay1" style="display:none;" >
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">PTT Hesap No *</label>
-                            <div class="col-md-8"><input id="pttnu" name="pttnu" class="form-control input-md" type="text" value=""></div>
-                        </div>                        
-                    </div>						
-                   
-            </div>
-        </div>
-
-        <div class="card card-primary">
-            <div class="card-header">
-                <h3 class="card-title">Erişim Bilgileri</h3>
-            </div>
-            <div class="card-body">
-				<div class="form-group">
-                    <label class="col-md-4 control-label">Bulunduğu Ülke *</label>
-                    <div class="col-md-8"><select name="user_country" id="user_country" class="form-control"><option>Seçiniz</option><option value="DİĞER" >D&#304;&#286;ER</option><option value="TÜRKİYE" selected>T&#220;RK&#304;YE</option></select></div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Bulunduğu İl *</label>
-                    <div class="col-md-8"><select name="user_city" id="user_city"  class="form-control"></select></div>
-                </div>
-                <div class="form-group" id="divcounty">
-                    <label class="col-md-4 control-label">Bulunduğu İlçe *</label>
-                    <div class="col-md-8"><select name="user_county" id="user_county"  class="form-control"></select></div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label">EPosta Aboneliği</label>
-                    <div class="col-md-8"><input type="checkbox" name="user_emailok" id="user_emailok" value="yes" checked /></div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Eposta</label>
-                    <div class="col-md-8"><input id="email" name="email" class="form-control input-md" type="text" value=""></div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="col-md-8 control-label">SMS Aboneliği</label>
-                            <div class="col-md-4"><input type="checkbox" name="user_smsok" id="user_smsok" value="yes" /></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="col-md-10 control-label" id="strRegionSMSSubscribed"><input type="hidden" name="OrjinalstrRegionSMSSubscribed" id="OrjinalstrRegionSMSSubscribed" value="$buro_muduru$ SMS Gönderebilsin" />ABİDE TAN SMS Gönderebilsin</label>
-                            <div class="col-md-2"><input type="checkbox" name="user_regionsmsok" id="user_regionsmsok" value="yes" /></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row"><div class="col-md-12"><p class="form-control-static"></p></div></div>
-                
-                <div class="form-group">
-                    <label class="col-md-4 control-label">GSM Numarası*</label>
-                    <div class="col-md-8"><input id="mobile" name="mobile" class="form-control input-md" type="text" placeholder="905xxxxxxxxx" value=""></div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Telefon Numarası</label>
-                    <div class="col-md-8"><input id="telephone" name="telephone" class="form-control input-md" type="text" placeholder="90xxxxxxxxxx" value=""></div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Faks Numarası</label>
-                    <div class="col-md-8"><input id="fax" name="fax" class="form-control input-md" type="text" value=""></div>
-                </div>
-            </div>
-        </div>     
-           
-            <div class="card card-primary">
-                <div class="card-header">
-                    <h3 class="card-title">Fatura Adresi</h3>
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
-                        <label class="col-md-4 control-label"  for="address">Fatura Adresi</label>
-                        <div class="col-md-8"><textarea rows="3" cols="26" name="address" class="form-control" id="address"></textarea></div>
-                    </div>
-                </div>
-            </div>
-        
-        <div class="card card-primary">
-            <div class="card-footer">
-                <div class="float-right">
-                  <button type="button" id="btnLogin1" name="btnLogin1" class="btn btn-primary"><i class="fa fa-user"></i> Kayıt Ol</button>
-                </div>
-                <a href="https://www.ersag.com.tr/account.asp" class="button"><span>Geri Dön</span></a>
-            </div>        
-        </div>
-    </div>
-</div>
-<input name="txtVerificationCode" id="txtVerificationCode" type="hidden" value="">
-</form>
-</div>
-<script type="text/javascript">
-    var submitted = 0;
-    function doChange(){
-        document.getElementById("do").value="change";
-        $('#frmRegister').submit();    
-    }
-    function doSponsor(){
-        document.getElementById("do").value="sponsor";
-        $('#frmRegister').submit();
-    }
-    function frmRegisterSubmit() {
-        if (submitted == 0) {
-            submitted = 1;
-            document.getElementById("do").value = "save";
-            $('#frmRegister').submit();
-        }
-    }
-    
-    jQuery(document).ready(function () {
-        setVerificationCodeonSuccess(function () {
-            $("#txtVerificationCode").val($('#txtAccountVerificationCode').val());
-            frmRegisterSubmit();
-        });
-        $("#password1").on('keyup', function () {
-            checkPasswordStrength($(this).val().trim(),$("#password-strength-status"));
-        });
-        $('#btnLogin1').on('click', function () {
-            
-                $("#ModalVerificationCode").modal();
-           
-        });
-        $("#ModalVerificationCode").on('shown.bs.modal', function (e) {
-            setVerificationCodeMobileNumber($("#mobile").val());
-            sendVerificationCode();
-        });
-        $('#sponsor').on('blur', function () {
-            doSponsor();
-        })
-        $('#chaptaimg').click(function () {
-            var now = new Date(), imgsrc = $(this).attr('src');
-            $(this).attr('src', imgsrc.split('?')[0] + '?x=' + now.toUTCString());
-        });
-        $('#marialstatus').change(function () { if (this.selectedIndex == 2) { $('#trpartnername').show(300); } else { if ($('#trpartnername').is(':visible')) { $('#trpartnername').hide(300); } } })
-        $('input[name="hesaptipi"]:radio').change(function () { $('div[id^="hesap_detay"]').hide(300); $('#hesap_detay' + $(this).val().toString()).show(300); });
-        $('#user_country').change(function () {
-            infoListChange("1", "", $('#user_country').val(), "", function (data) {
-                parseJSONtoForm({ "user_city": data });
-            })
-        });
-        $('#user_city').change(function () {
-            infoListChange("3", "", $('#user_city').val(), "", function (data) {
-                $('#divcounty').toggle(data != '' || $('#user_country').val() == "TÜRKİYE");
-                parseJSONtoForm({ "user_county": data });
-            })
-        });
-        if ($('#user_country').val() != "") {
-            infoListChange("1", "", $('#user_country').val(), "", function (data) {
-                parseJSONtoForm({ "user_city": data });
-
-            })
-            infoListChange("1", "", $('#user_city').val(), "", function (data) {
-                $('#divcounty').toggle(data != '' || $('#user_country').val() == "TÜRKİYE");
-                parseJSONtoForm({ "user_county": data });
-            })
-        }
-
-        /*
-        $('#dateofbirth').datetimepicker({
-        format: 'L'
-        });
-        */
-        $('#dateofbirth').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
-    });
-</script>
-</div></div></div>
-<!-- /.row -->
-
+        <!-- /.row -->
 
       </div><!-- /.container-fluid -->
     </div>
   </div>
   <footer class="main-footer"></footer>
-</div>
+  </div>
 </body>
 
 <div class="modal fade modal-fullscreen" id="ModalWithIframe">
-    <div class="modal-dialog modal-xl">
+  <div class="modal-dialog modal-xl">
     <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title" id="ModalWithIframeTitle"></h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body" id="ModalWithIframeBody"></div>
+      <div class="modal-header">
+        <h4 class="modal-title" id="ModalWithIframeTitle"></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="ModalWithIframeBody"></div>
     </div>
-    </div>
+  </div>
 </div>
 
 <div class="modal fade" id="ModalVerificationCode" tabindex="-1" role="dialog">
-    <div class="modal-dialog ">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Üye Doğrulama</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">                
-                <i id="VerificationCodeLoading" class="fa fa-spinner fa-spin" style="font-size:24px; display:none;"></i>
-                <i id="VerificationCodeError" class="fa fa-exclamation-triangle" style="font-size:24px;color:red; display:none;"></i>
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Üye Doğrulama</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <i id="VerificationCodeLoading" class="fa fa-spinner fa-spin" style="font-size:24px; display:none;"></i>
+        <i id="VerificationCodeError" class="fa fa-exclamation-triangle" style="font-size:24px;color:red; display:none;"></i>
 
-                <div id="VerificationCodeHiddenDiv">
-                    <div class="form-group"><p>Sistemde kayıtlı olan cep telefonunuza gelen kodu aşağıdaki alana giriniz. Kodun girilmesi için süre yoktur.  İşlem yoğunluğuna göre kodun gelmesi zaman alabilir. Telefonunuza bir kod gelmediyse bekleyebilir ya da 10 sn sonra "Yenile" butonuna basabilirsiniz.</p></div>
-                    <div class="form-group">
-                        <div>
-                            <input type="hidden" name="txtverifymobile" id="txtverifymobile" value="" />
-                            <input name="txtAccountVerificationCode" id="txtAccountVerificationCode" class="form-control input" size="5" placeholder="Doğrulama veya Aktivasyon Kodu" type="number">
-                        </div>
-                    </div>
-                </div>
-                <!--userForm-->
+        <div id="VerificationCodeHiddenDiv">
+          <div class="form-group">
+            <p>Sistemde kayıtlı olan cep telefonunuza gelen kodu aşağıdaki alana giriniz. Kodun girilmesi için süre yoktur. İşlem yoğunluğuna göre kodun gelmesi zaman alabilir. Telefonunuza bir kod gelmediyse bekleyebilir ya da 10 sn sonra "Yenile" butonuna basabilirsiniz.</p>
+          </div>
+          <div class="form-group">
+            <div>
+              <input type="hidden" name="txtverifymobile" id="txtverifymobile" value="" />
+              <input name="txtAccountVerificationCode" id="txtAccountVerificationCode" class="form-control input" size="5" placeholder="Doğrulama veya Aktivasyon Kodu" type="number">
             </div>
-            <div class="modal-footer">
-                <button id="btnVerificationRefresh" class="btn btn-lg btn-default" onclick="sendVerificationCode()" type="button" >Yenile</button>
-                <input id="btnVerificationSubmit" name="button" class="btn btn-lg btn-primary" onclick="checkVerificationCode();" value="Devam Et" type="button">
-             </div>
+          </div>
         </div>
-        <!-- /.modal-content -->
+        <!--userForm-->
+      </div>
+      <div class="modal-footer">
+        <button id="btnVerificationRefresh" class="btn btn-lg btn-default" onclick="sendVerificationCode()" type="button">Yenile</button>
+        <input id="btnVerificationSubmit" name="button" class="btn btn-lg btn-primary" onclick="checkVerificationCode();" value="Devam Et" type="button">
+      </div>
     </div>
-    <!-- /.modal-dialog -->
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
 </div>
 <div class="gap"></div>
 <div class="modal fade" id="kargomnerede">
-<div class="modal-dialog">
+  <div class="modal-dialog">
     <div class="modal-content">
-    <div class="modal-header">
+      <div class="modal-header">
         <h4 class="modal-title">Kargom Nerede?</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
+          <span aria-hidden="true">&times;</span>
         </button>
-    </div>
-    <div class="modal-body">
+      </div>
+      <div class="modal-body">
         <iframe id="kargomneredeiframe" src="about:blank" style="width:99%; height:300px; background-color:#ffffff;" frameborder="0"></iframe>
-    </div>
+      </div>
     </div>
     <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
 </div>
-<!-- /.modal-dialog -->
-</div>
-
 
 <script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jquery-ui/jquery-ui.min.js"></script>
 <script type="text/javascript">
-    $.widget.bridge('uibutton', $.ui.button)
+  $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
 <script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -625,7 +605,7 @@
 <link rel="stylesheet" href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jqtree/example.css" type="text/css" />
 <script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jqtree/tree.jquery.js"></script>
 
-    <!-- DataTables  & Plugins -->
+<!-- DataTables  & Plugins -->
 <script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
@@ -674,76 +654,82 @@
 <link href="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jquery.universal-smartbanner/jquery.ultimate-smartbanner.css" rel="stylesheet" type="text/css" media="all">
 <script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/plugins/jquery.universal-smartbanner/jquery.ultimate-smartbanner.js"></script>
 <style>
-    #smartbanner { 
-    position:fixed;
-    top:unset;
-    bottom:0 !important;
-    height:120px;
-    }
+  #smartbanner {
+    position: fixed;
+    top: unset;
+    bottom: 0 !important;
+    height: 120px;
+  }
 </style>
 <!-- AdminLTE App -->
 <script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/dist/js/adminlte.js"></script>
 <script type="text/javascript" src="//dosya.ersag.com.tr/yukleme/tema/account/adminlte/dist/js/ersag.js?v=16"></script>
 
-
 <script type="text/javascript">
-
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    const iosAppUrl = "ersag://";
-    const androidAppUrl = "intent://#Intent;scheme=ersag;package=com.ayfanet.ersag_mobile_app;end";
-    const appStoreUrl = "https://apps.apple.com/us/app/ersag/id6471481264";
-    const playStoreUrl = "https://play.google.com/store/apps/details?id=com.ayfanet.ersag_mobile_app";
-
-    jQuery(document).ready(function () {
-        $("#openInAppButton").on('click', function (e) {
-            e.preventDefault();
-
-            if (/android/i.test(userAgent)) {
-                window.location.href = androidAppUrl;
-                setTimeout(function () {
-                    window.location.href = playStoreUrl;
-                }, 2000); // Eğer uygulama açılmazsa 2 saniye sonra Play Store'a yönlendirin.
-            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                window.location.href = iosAppUrl;
-                setTimeout(function () {
-                    window.location.href = appStoreUrl;
-                }, 2000); // Eğer uygulama açılmazsa 2 saniye sonra App Store'a yönlendirin.
-            } else {
-                window.location.href = appStoreUrl;
-            }
-        });
-     $.smartbanner({
-        title: 'Mobil uygulamada açmak ister misiniz?', // What the title of the app should be in the banner (defaults to <title>)
-        author: null, // What the author of the app should be in the banner (defaults to <meta name="author"> or hostname)
-        price: '', // Price of the app
-        priceText: '', // Text of price for store
-        icon: null, // The URL of the icon (defaults to <meta name="apple-touch-icon">)
-        button: 'Aç', // Text for the install button
-        appStoreLanguage: 'tr', // Language code for iOS App Store
-    
-        // Deprecated - replaced by 'priceText' and 'Device Configuration Specific' section :
-        inAppStore: '', // Text of price for iOS - iPhone
-        inGooglePlay: '', // Text of price for Android Phone
-        inWindowsStore: '', //Text of price for Windows Phone
-        iconGloss: null, // Force gloss CSS effect for iOS even for precomposed
-    
-        // Technical config :
-        daysHidden: 15, // Duration to hide the banner after being closed (0 = always show banner)
-        daysReminder: 0, // Duration to hide the banner after "VIEW" is clicked *separate from when the close button is clicked* (0 = always show banner)
-        scale: 'auto', // Scale based on viewport size (set to 1 to disable)
-        container: 'body', // Container where the banner will be injected
-        force: null, // Choose 'ios', 'android' or 'windows'. Don't do a browser check, just always show this banner
-    
-        // Device Configuration Specific - Use JSON datas who will surcharge the original datas :
-        iphoneConfig: null,
-        ipadConfig: null,
-        androidConfig: null,
-        androidTabsConfig: null,
-        windowsPhoneConfig: null,
-        windowsRtConfig: null
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  const iosAppUrl = "ersag://";
+  const androidAppUrl = "intent://#Intent;scheme=ersag;package=com.ayfanet.ersag_mobile_app;end";
+  const appStoreUrl = "https://apps.apple.com/us/app/ersag/id6471481264";
+  const playStoreUrl = "https://play.google.com/store/apps/details?id=com.ayfanet.ersag_mobile_app";
+  jQuery(document).ready(function() {
+    $("#openInAppButton").on('click', function(e) {
+      e.preventDefault();
+      if (/android/i.test(userAgent)) {
+        window.location.href = androidAppUrl;
+        setTimeout(function() {
+          window.location.href = playStoreUrl;
+        }, 2000); // Eğer uygulama açılmazsa 2 saniye sonra Play Store'a yönlendirin.
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href = iosAppUrl;
+        setTimeout(function() {
+          window.location.href = appStoreUrl;
+        }, 2000); // Eğer uygulama açılmazsa 2 saniye sonra App Store'a yönlendirin.
+      } else {
+        window.location.href = appStoreUrl;
+      }
+    });
+    $.smartbanner({
+      title: 'Mobil uygulamada açmak ister misiniz?', // What the title of the app should be in the banner (defaults to <title>)
+      author: null, // What the author of the app should be in the banner (defaults to <meta name="author"> or hostname)
+      price: '', // Price of the app
+      priceText: '', // Text of price for store
+      icon: null, // The URL of the icon (defaults to <meta name="apple-touch-icon">)
+      button: 'Aç', // Text for the install button
+      appStoreLanguage: 'tr', // Language code for iOS App Store
+      // Deprecated - replaced by 'priceText' and 'Device Configuration Specific' section :
+      inAppStore: '', // Text of price for iOS - iPhone
+      inGooglePlay: '', // Text of price for Android Phone
+      inWindowsStore: '', //Text of price for Windows Phone
+      iconGloss: null, // Force gloss CSS effect for iOS even for precomposed
+      // Technical config :
+      daysHidden: 15, // Duration to hide the banner after being closed (0 = always show banner)
+      daysReminder: 0, // Duration to hide the banner after "VIEW" is clicked *separate from when the close button is clicked* (0 = always show banner)
+      scale: 'auto', // Scale based on viewport size (set to 1 to disable)
+      container: 'body', // Container where the banner will be injected
+      force: null, // Choose 'ios', 'android' or 'windows'. Don't do a browser check, just always show this banner
+      // Device Configuration Specific - Use JSON datas who will surcharge the original datas :
+      iphoneConfig: null,
+      ipadConfig: null,
+      androidConfig: null,
+      androidTabsConfig: null,
+      windowsPhoneConfig: null,
+      windowsRtConfig: null
     })
-});
+  });
 </script>
 
-</html> 
-    
+</html>
+
+
+    <a
+      href="javascript:void(
+        window.open(
+          'https://form.jotform.com/243604627584058',
+          'blank',
+          'scrollbars=yes,
+          toolbar=no,
+          width=700,
+          height=500'
+        )
+      )
+    ">
