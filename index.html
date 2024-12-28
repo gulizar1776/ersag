@@ -99,9 +99,6 @@
           <strong>Sponsor:</strong> Abide Tan
         </p>
         <p>
-          <strong>Sponsor No:</strong> 1058609
-        </p>
-        <p>
           <strong>GSM:</strong> 0546 219 28 46
         </p>
       </div>
@@ -115,23 +112,24 @@
         <label for="address">Adres:</label>
         <textarea id="address" name="address" rows="4" required></textarea>
         <form id="sponsorForm">
-          <label for="sponsor">Sponsor Numarası:</label>label> <input type="text" id="sponsor" name="sponsor" value="1058609" requred>
-          <button type="button" onlick="redirectToPage()">Formu Gönder</button>
+          <label for="sponsor">Sponsor Numarası:</label>
+          <input type="text" id="sponsor" name="sponsor" value="1058609" requred>
+          <button id="send" type="button">Formu Gönder</button>
         </form>
-        <script>
-          function redirectToPage() {
-            var sponsorNumber = document.getElementById('sponsor').value;
-            if (sponsorNumber) {
-              var url = 'https://www.ersag.com.tr/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor=' + sponsorNumber;
-              window.location.href = url;
-            } else {
-              alert("lütfen sponsor numarasını girin!");
-            }
-          }
-        </script>
         <div class="btn-group">
           <a href="https://wa.me/905462192846">WhatsApp ile İletişim</a>
         </div>
     </div>
+    <script defer>
+      document.getElementById("send").onclick = function() {
+        var sponsorNumber = document.getElementById('sponsor').value;
+        if (sponsorNumber) {
+          var url = 'https://www.ersag.com.tr/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor=' + sponsorNumber;
+          window.location.href = url;
+        } else {
+          alert("lütfen sponsor numarasını girin!");
+        }
+      }
+    </script>
   </body>
 </html>
