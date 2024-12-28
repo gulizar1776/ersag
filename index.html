@@ -114,11 +114,31 @@
         <input type="tel" id="phone" name="phone" required />
         <label for="address">Adres:</label>
         <textarea id="address" name="address" rows="4" required></textarea>
-	<form
-		action=https://www.ersag.com.tr/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor="4442916"
-		methot="get">
-		<button type="submit">Formu Gönder</button>
-	</form>
+	<form id="sponsorForm">
+	 	<label for="sponsor">Sponsor Numarası:</label>label>
+		<input type="text"id="sponsor"
+			name="sponsor"value="1058609"requred>
+		<button type="button"onlick="redirectToPage()">Formu Gönder</button>
+		
+			
+		</form>
+	      <scrip>
+		      function redirectToPage(){
+		      var sponsorNumber=
+		      document.getElementById('sponsor').v alue
+		      if (sponsorNumber){
+		      var url=
+		      'https://www.ersag.com.tr/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor='+sponsorNumber;
+		      window.location.href=url;     
+		      
+		      }else{
+		      alert("lütfen sponsor numarasını girin!");
+		      }
+		      }
+	      </scrip>
+			
+		
+
 		
       
 
