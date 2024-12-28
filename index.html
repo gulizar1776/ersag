@@ -25,6 +25,7 @@
 
       .header {
         text-align: center;
+        /* Centering all the header text */
         margin-bottom: 20px;
       }
 
@@ -36,6 +37,7 @@
         font-weight: bold;
         display: block;
         margin: 10px 0 5px;
+        text-align: left;
       }
 
       input,
@@ -95,12 +97,12 @@
       <img src="images.jpg" />
       <div class="header">
         <h1>Ersag Üyelik Formu</h1>
-        <p>
-          <strong>Sponsor:</strong> Abide Tan
-        </p>
-        <p>
-          <strong>GSM:</strong> 0546 219 28 46
-        </p>
+        <label for="sponsorNumber">Sponsor Numarası:</label>
+        <input type="text" id="sponsorNumber" name="sponsorNumber" placeholder="1058609" value="1058609" required />
+        <label for="sponsorName">Sponsor:</label>
+        <input type="text" id="sponsorName" name="sponsorName" placeholder="Abide Tan" value="Abide Tan" required />
+        <label for="gsm">GSM:</label>
+        <input type="text" id="gsm" name="gsm" placeholder="0546 219 28 46" value="0546 219 28 46" required />
       </div>
       <form action="#" method="post">
         <label for="name">Ad Soyad:</label>
@@ -111,18 +113,15 @@
         <input type="tel" id="phone" name="phone" required />
         <label for="address">Adres:</label>
         <textarea id="address" name="address" rows="4" required></textarea>
-        <form id="sponsorForm">
-          <label for="sponsor">Sponsor Numarası:</label>
-          <input type="text" id="sponsor" name="sponsor" value="1058609" requred>
-          <button id="send" type="button">Formu Gönder</button>
-        </form>
-        <div class="btn-group">
-          <a href="https://wa.me/905462192846">WhatsApp ile İletişim</a>
-        </div>
+        <button id="send" type="button">Formu Gönder</button>
+      </form>
+      <div class="btn-group">
+        <a href="https://wa.me/905462192846">WhatsApp ile İletişim</a>
+      </div>
     </div>
     <script defer>
       document.getElementById("send").onclick = function() {
-        var sponsorNumber = document.getElementById('sponsor').value;
+        var sponsorNumber = document.getElementById('sponsorNumber').value;
         if (sponsorNumber) {
           var url = 'https://www.ersag.com.tr/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor=' + sponsorNumber;
           window.location.href = url;
