@@ -114,38 +114,24 @@
         <input type="tel" id="phone" name="phone" required />
         <label for="address">Adres:</label>
         <textarea id="address" name="address" rows="4" required></textarea>
-	<form id="sponsorForm">
-	 	<label for="sponsor">Sponsor Numarası:</label>label>
-		<input type="text"id="sponsor"
-			name="sponsor"value="1058609"requred>
-		<button type="button"onlick="redirectToPage()">Formu Gönder</button>
-		
-			
-		</form>
-	      <scrip>
-		      function redirectToPage(){
-		      var sponsorNumber=
-		      document.getElementById('sponsor').v alue
-		      if (sponsorNumber){
-		      var url=
-		      'https://www.ersag.com.tr/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor='+sponsorNumber;
-		      window.location.href=url;     
-		      
-		      }else{
-		      alert("lütfen sponsor numarasını girin!");
-		      }
-		      }
-	      </scrip>
-			
-		
-
-		
-      
-
-      <div class="btn-group">
-        <a href="https://wa.me/905462192846">WhatsApp ile İletişim</a>
-        
-      </div>
+        <form id="sponsorForm">
+          <label for="sponsor">Sponsor Numarası:</label>label> <input type="text" id="sponsor" name="sponsor" value="1058609" requred>
+          <button type="button" onlick="redirectToPage()">Formu Gönder</button>
+        </form>
+        <script>
+          function redirectToPage() {
+            var sponsorNumber = document.getElementById('sponsor').value;
+            if (sponsorNumber) {
+              var url = 'https://www.ersag.com.tr/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor=' + sponsorNumber;
+              window.location.href = url;
+            } else {
+              alert("lütfen sponsor numarasını girin!");
+            }
+          }
+        </script>
+        <div class="btn-group">
+          <a href="https://wa.me/905462192846">WhatsApp ile İletişim</a>
+        </div>
     </div>
   </body>
 </html>
