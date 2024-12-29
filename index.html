@@ -25,7 +25,6 @@
 
       .header {
         text-align: center;
-        /* Centering all the header text */
         margin-bottom: 20px;
       }
 
@@ -97,38 +96,44 @@
       <img src="images.jpg" />
       <div class="header">
         <h1>Ersag Üyelik Formu</h1>
-        <label for="sponsorNumber">Sponsor Numarası:</label>
-        <input type="text" id="sponsorNumber" name="sponsorNumber" placeholder="1058609" value="1058609" required />
-        <label for="sponsorName">Sponsor:</label>
-        <input type="text" id="sponsorName" name="sponsorName" placeholder="Abide Tan" value="Abide Tan" required />
-        <label for="gsm">GSM:</label>
-        <input type="text" id="gsm" name="gsm" placeholder="0546 219 28 46" value="0546 219 28 46" required />
-      </div>
-      <iframe width="360" height"115"
-        src="https://www.youtube.com/embed/6GrmwDkk94"
-        title="Yutube video player"
-        frameborder="0"
-        allow="accelerometer;
-        autoplay; clipboard-write;
-        encryted-media; gyroscope;
-        picture-in-picture"
-        allowfullscreen>
-      </iframe>
-      
-        <button id="send" type="button">Formu Gönder</button>
-      </form>
-      <div class="btn-group">
-        <a href="https://wa.me/905462192846">WhatsApp ile İletişim</a>
+        <form id="membershipForm">
+          <label for="sponsorNumber">Sponsor Numarası:</label>
+          <input type="text" id="sponsorNumber" name="sponsorNumber" placeholder="1058609" value="1058609" required />
+          
+          <label for="sponsorName">Sponsor:</label>
+          <input type="text" id="sponsorName" name="sponsorName" placeholder="Abide Tan" value="Abide Tan" required />
+          
+          <label for="gsm">GSM:</label>
+          <input type="text" id="gsm" name="gsm" placeholder="0546 219 28 46" value="0546 219 28 46" required />
+          
+          <iframe width="360" height="215" 
+            src="https://www.youtube.com/embed/6GrmwDkk94" 
+            title="Youtube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          
+          <button id="send" type="button">Formu Gönder</button>
+        </form>
+
+        <div class="btn-group">
+          <a href="https://wa.me/905462192846">WhatsApp ile İletişim</a>
+        </div>
       </div>
     </div>
+    
     <script defer>
       document.getElementById("send").onclick = function() {
         var sponsorNumber = document.getElementById('sponsorNumber').value;
+        
+        // Eğer sponsor numarası girilmemişse uyarı ver
         if (sponsorNumber) {
           var url = 'https://www.ersag.com.tr/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor=' + sponsorNumber;
+          // Yeni sayfaya yönlendir
           window.location.href = url;
         } else {
-          alert("lütfen sponsor numarasını girin!");
+          alert("Lütfen sponsor numarasını girin!");
         }
       }
     </script>
