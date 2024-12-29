@@ -162,3 +162,112 @@
     </script>
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad Soyad Kaydet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .message {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Ad Soyad Kaydet</h2>
+    <form id="nameForm">
+        <label for="firstName">Ad:</label>
+        <input type="text" id="firstName" placeholder="Adınızı girin" required>
+
+        <label for="lastName">Soyad:</label>
+        <input type="text" id="lastName" placeholder="Soyadınızı girin" required>
+
+        <button type="submit">Kaydet</button>
+    </form>
+    <div class="message" id="message"></div>
+</div>
+
+<script>
+    // Formu ve mesajı seç
+    const form = document.getElementById("nameForm");
+    const messageDiv = document.getElementById("message");
+
+    // Form gönderildiğinde
+    form.onsubmit = function(event) {
+        event.preventDefault(); // Sayfanın yenilenmesini engelle
+
+        // Ad ve Soyad bilgilerini al
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+
+        // Verileri LocalStorage'a kaydet
+        localStorage.setItem("firstName", firstName);
+        localStorage.setItem("lastName", lastName);
+
+        // Kullanıcıya başarı mesajı göster
+        messageDiv.innerHTML = `Kaydedilen Ad: ${firstName}, Soyad: ${lastName}`;
+
+        // Formu temizle
+        form.reset();
+    }
+
+    // Sayfa yüklendiğinde kaydedilen veriyi kontrol et
+    window.onload = function() {
+        const savedFirstName = localStorage.getItem("firstName");
+        const savedLastName = localStorage.getItem("lastName");
+
+        if (savedFirstName && savedLastName) {
+            messageDiv.innerHTML = `Daha önce kaydedilen Ad: ${savedFirstName}, Soyad: ${savedLastName}`;
+        }
+    }
+</script>
+
+</body>
+</html>
