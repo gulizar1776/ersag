@@ -1,218 +1,134 @@
-<!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Üye Kayıt Formu</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ersag Üyelik Formu</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-            margin: 0;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-        h2 {
-            text-align: center;
-        }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-        }
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .message {
-            text-align: center;
-            margin-top: 20px;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        text-align: center;
+        /* Centering all the header text */
+        margin-bottom: 20px;
+      }
+
+      .header h1 {
+        color: orange;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin: 10px 0 5px;
+        text-align: left;
+      }
+
+      input,
+      textarea {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: orange;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: darkorange;
+      }
+
+      .btn-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+        gap: 5px;
+      }
+
+      .btn-group a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: orange;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        width: 48%;
+        display: inline-block;
+      }
+
+      .btn-group a:hover {
+        background-color: darkorange;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     </style>
-</head>
-<body>
-
-<div class="container">
-    <h2>Üye Kayıt</h2>
-    <form id="memberForm">
-        <label for="firstName">Ad:</label>
-        <input type="text" id="firstName" placeholder="Adınızı girin" required>
-
-        <label for="lastName">Soyad:</label>
-        <input type="text" id="lastName" placeholder="Soyadınızı girin" required>
-
-        <label for="phoneNumber">Telefon Numarası:</label>
-        <input type="text" id="phoneNumber" placeholder="Telefon numaranızı girin" required>
-
-        <label for="tcNumber">TC Kimlik Numarası:</label>
-        <input type="text" id="tcNumber" placeholder="TC kimlik numaranızı girin" required>
-
-        <button type="submit">Kaydet</button>
-    </form>
-    <div class="message" id="message"></div>
-</div>
-
-<script>
-    // Formu ve mesajı seç
-    const form = document.getElementById("memberForm");
-    const messageDiv = document.getElementById("message");
-
-    // Form gönderildiğinde
-    form.onsubmit = function(event) {
-        event.preventDefault(); // Sayfanın yenilenmesini engelle
-
-        // Kullanıcı bilgilerini al
-        const firstName = document.getElementById("firstName").value;
-        const lastName = document.getElementById("lastName").value;
-        const phoneNumber = document.getElementById("phoneNumber").value;
-        const tcNumber = document.getElementById("tcNumber").value;
-
-        // Verileri LocalStorage'a kaydet
-        const memberData = {
-            firstName: firstName,
-            lastName: lastName,
-            phoneNumber: phoneNumber,
-            tcNumber: tcNumber
-        };
-
-        // Mevcut üyeleri al ve yeni üyeyi ekle
-        let members = JSON.parse(localStorage.getItem("members")) || [];
-        members.push(memberData);
-        localStorage.setItem("members", JSON.stringify(members));
-
-        // Kullanıcıya başarı mesajı göster
-        messageDiv.innerHTML = "Üye başarıyla kaydedildi!";
-
-        // Formu temizle
-        form.reset();
-    };
-</script>
-
-</body>
-</html>
-2. Kayıtları Görüntüleme Sayfası:
-HTML ve JavaScript ile Tablo Görünümü:
-
-html
-Kodu kopyala
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Üye Listesi</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            background-color: #f4f4f4;
-            margin: 0;
+  </head>
+  <body>
+    <div class="container">
+      <img src="images.jpg" />
+      <div class="header">
+        <h1>Ersag Üyelik Formu</h1>
+        <label for="sponsorNumber">Sponsor Numarası:</label>
+        <input type="text" id="sponsorNumber" name="sponsorNumber" placeholder="1058609" value="1058609" required />
+        <label for="sponsorName">Sponsor:</label>
+        <input type="text" id="sponsorName" name="sponsorName" placeholder="Abide Tan" value="Abide Tan" required />
+        <label for="gsm">GSM:</label>
+        <input type="text" id="gsm" name="gsm" placeholder="0546 219 28 46" value="0546 219 28 46" required />
+      </div>
+      <form action="#" method="post">
+        <label for="name">Ad Soyad:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="tc">TC Kimlik No:</label>
+        <input type="text" id="tc" name="tc" required />
+        <label for="phone">Cep Telefonu:</label>
+        <input type="tel" id="phone" name="phone" required />
+        <label for="address">Adres:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+        <button id="send" type="button">Formu Gönder</button>
+      </form>
+      <div class="btn-group">
+        <a href="https://wa.me/905462192846">WhatsApp ile İletişim</a>
+      </div>
+    </div>
+    <script defer>
+      document.getElementById("send").onclick = function() {
+        var sponsorNumber = document.getElementById('sponsorNumber').value;
+        if (sponsorNumber) {
+          var url = 'https://www.ersag.com.tr/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor=' + sponsorNumber;
+          window.location.href = url;
+        } else {
+          alert("lütfen sponsor numarasını girin!");
         }
-        h2 {
-            text-align: center;
-        }
-        table {
-            width: 80%;
-            margin-top: 20px;
-            border-collapse: collapse;
-            text-align: left;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 12px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        td {
-            background-color: #fff;
-        }
-        .back-link {
-            margin-top: 20px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-
-<h2>Üye Listesi</h2>
-
-<table id="membersTable">
-    <thead>
-        <tr>
-            <th>Ad</th>
-            <th>Soyad</th>
-            <th>Telefon Numarası</th>
-            <th>TC Kimlik Numarası</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Üye verileri burada görüntülenecek -->
-    </tbody>
-</table>
-
-<div class="back-link">
-    <a href="form.html">Kayıt Formuna Dön</a>
-</div>
-
-<script>
-    window.onload = function() {
-        // LocalStorage'dan üyeleri al
-        const members = JSON.parse(localStorage.getItem("members")) || [];
-
-        // Tabloyu bul
-        const tableBody = document.querySelector("#membersTable tbody");
-
-        // Eğer üyeler varsa, her birini tabloya ekle
-        members.forEach(member => {
-            const row = document.createElement("tr");
-
-            // Üye bilgilerini hücre olarak ekle
-            row.innerHTML = `
-                <td>${member.firstName}</td>
-                <td>${member.lastName}</td>
-                <td>${member.phoneNumber}</td>
-                <td>${member.tcNumber}</td>
-            `;
-            tableBody.appendChild(row);
-        });
-
-        // Eğer hiç üye yoksa bir mesaj göster
-        if (members.length === 0) {
-            tableBody.innerHTML = "<tr><td colspan='4'>Henüz hiçbir üye kaydedilmedi.</td></tr>";
-        }
-    }
-</script>
-
-</body>
+      }
+    </script>
+  </body>
 </html>
