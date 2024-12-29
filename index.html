@@ -147,6 +147,31 @@
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen>
 </iframe>
-<a href="https://wa.me/905462192846" class="whatsapp-btn">
-  <i class="fab fa-whatsapp"></i> WhatsApp ile İletişim
-</a>
+<div class="social-btns">
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/905462192846" class="social-btn whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> WhatsApp ile İletişim
+          </a>
+          
+          <!-- Instagram Button -->
+          <a href="https://www.instagram.com/yourusername" class="social-btn instagram-btn">
+            <i class="fab fa-instagram"></i> Instagram'da Bizi Takip Et
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <script defer>
+      document.getElementById("send").onclick = function() {
+        var sponsorNumber = document.getElementById('sponsorNumber').value;
+        
+        if (sponsorNumber) {
+          var url = 'https://www.ersag.com.tr/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor=' + sponsorNumber;
+          window.location.href = url;
+        } else {
+          alert("Lütfen sponsor numarasını girin!");
+        }
+      }
+    </script>
+  </body>
+</html>
