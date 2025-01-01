@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ersağ Üyelik Formu</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      
+      <div class="sponsor-info">
+        <img src="logo.jpg" />
+        <h2>Ersağ Üye Kayıt Formu</h2>
+        <p>Sponsor No: <span id="sponsor-no">Yükleniyor...</span>
+        </p>
+        <p>Sponsor: <span id="sponsor-name">Yükleniyor...</span>
+        </p>
+        <p>Sponsor Tel: <span id="sponsor-gsm">Yükleniyor...</span>
+        </p>
+      </div>
+
+      <form id="form">
+        <div class="form-group">
+          <label for="full_name">Ad Soyad:</label>
+          <input id="full_name" type="text" required />
+        </div>
+        <div class="form-group">
+          <label for="tc">TC Kimlik No:</label>
+          <input id="tc" type="text" required />
+        </div>
+        <div class="form-group">
+          <label for="phone_number">Cep Telefonu:</label>
+          <input id="phone_number" type="text" required />
+        </div>
+        <div class="form-group">
+          <label for="address">Adres:</label>
+          <input type="text" id="address" required/>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Formu Gönder</button>
+        </div>
+      </form>
+
+      <div class="icon-buttons">
+        <a id="whatsapp-link" target="_blank">📱 WhatsApp</a>
+        <a id="instagram-link" target="_blank">📷 Instagram</a>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
