@@ -7,6 +7,14 @@ const sponsorGsmEl = document.getElementById("sponsor-gsm");
 const whatsappLinkEl = document.getElementById("whatsapp-link");
 const instagramLinkEl = document.getElementById("instagram-link");
 
+const sanitizePhoneNumber = number => {
+  let sanitizedNumber = number.replace(/[^0-9]/g, "");
+  if (sanitizedNumber.startsWith("0")) sanitizedNumber = sanitizedNumber.slice(1);
+  if (!sanitizedNumber.startsWith("90")) {
+    sanitizedNumber = "90" + sanitizedNumber;
+  }
+  return sanitizedNumber;
+};
 
 const getSponsorIdFromUrl = () => new URLSearchParams(window.location.search).get("sponsor");
 
@@ -26,14 +34,26 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (sponsorInfo[0].gsm) {
       sponsorGsmEl.style.color = "#25d366";
       sponsorGsmEl.textContent = sponsorInfo[0].gsm;
-      whatsappLinkEl.href = `https://wa.me/${sponsorInfo[0].gsm}`;
+      document.getElementsByClassName('whatsapp')[0].classList.remove('no-animate');
+      whatsappLinkEl.href = `https://wa.me/${sanitizePhoneNumber(sponsorInfo[0].gsm)}`;
     }
-    if (sponsorInfo[0].instagram) instagramLinkEl.href = `https://instagram.com/${sponsorInfo[0].instagram}`;
+    if (sponsorInfo[0].instagram) {
+      instagramLinkEl.href = `https://instagram.com/${sponsorInfo[0].instagram}`
+      document.getElementsByClassName('instagram')[0].classList.remove('no-animate');
+    }
   } else {
     sponsorNameEl.style.color = "#ff0000";
     sponsorNameEl.textContent = "Sponsor bulunamadı";
     sponsorGsmEl.textContent = "-";
   }
+});
+
+document.querySelectorAll('.button').forEach(button => {
+  button.addEventListener('click', function (event) {
+    if (this.classList.contains('no-animate')) {
+      event.preventDefault();
+    }
+  });
 });
 
 formEl.onsubmit = async e => {
@@ -46,7 +66,6 @@ formEl.onsubmit = async e => {
     {
       sponsor_id: getSponsorIdFromUrl(),
       full_name: document.getElementById("full_name").value.trim(),
-      tc: document.getElementById("tc").value.trim(),
       phone_number: document.getElementById("phone_number").value.trim(),
       address: document.getElementById("address").value.trim()
     }
