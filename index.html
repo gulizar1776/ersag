@@ -5,20 +5,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ersağ Üyelik Formu</title>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        box-sizing: border-box;
+        overflow-y: auto;
+        padding: 20px;
+      }
+
+      .form-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        flex-direction: column;
+        align-content: center;
+        padding: 20px;
+        height: auto;
+      }
+
+      .form-group {
+        width: 100%;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      #form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      img {
+        margin-top: 10px;
+        position: relative;
+        width: 200px;
+      }
+
+      .sponsor-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        position: relative;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .form-actions button {
+        background-color: #ff7f00;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      }
+
+      .form-actions button:hover {
+        background-color: #ff6600;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      .form-actions button:active {
+        background-color: #e65c00;
+        transform: translateY(1px);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .icon-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .icon-buttons a {
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 24px;
+      }
+
+      hr {
+        margin-bottom: 10px;
+      }
+
+      .icon-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 10px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        text-decoration: none;
+        color: #333;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .button img {
+        width: 32px;
+        height: 32px;
+        top: -5px;
+      }
+
+      .button:hover {
+        background-color: #e0e0e0;
+        transform: scale(1.05);
+      }
+
+      .button:active {
+        transform: scale(0.95);
+      }
+
+      .button span {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .button.no-animate {
+        transition: none;
+      }
+
+      .button.no-animate:hover {
+        transform: none;
+        background-color: #f9f9f9;
+      }
+
+      .button.no-animate:active {
+        transform: none;
+      }
+    </style>
   </head>
   <body>
     <div class="form-container">
-      
       <div class="sponsor-info">
         <img src="logo.jpg" />
         <h2>Ersağ Üye Kayıt Formu</h2>
-        <p>Sponsor No: <span id="sponsor-no">Yükleniyor...</span>
-        </p>
-        <p>Sponsor: <span id="sponsor-name">Yükleniyor...</span>
-        </p>
-        <p>Sponsor Tel: <span id="sponsor-gsm">Yükleniyor...</span>
-        </p>
+        <p>Sponsor No: <span id="sponsor-no">Yükleniyor...</span></p>
+        <p>Sponsor: <span id="sponsor-name">Yükleniyor...</span></p>
+        <p>Sponsor Tel: <span id="sponsor-gsm">Yükleniyor...</span></p>
       </div>
 
       <form id="form">
@@ -32,7 +185,7 @@
         </div>
         <div class="form-group">
           <label for="address">Adres:</label>
-          <input type="text" id="address" required/>
+          <input type="text" id="address" required />
         </div>
         <div class="form-actions">
           <button type="submit">Formu Gönder</button>
@@ -41,18 +194,154 @@
 
       <div class="icon-buttons">
         <a id="whatsapp-link" href="#" target="_blank" class="button whatsapp no-animate">
-            <img src="whatsapp.png" alt="WhatsApp" />
-            <span>WhatsApp</span>
+          <img src="whatsapp.png" alt="WhatsApp" />
+          <span>WhatsApp</span>
         </a>
         <a id="instagram-link" href="#" target="_blank" class="button instagram no-animate">
-            <img src="instagram.webp" alt="Instagram" />
-            <span>Instagram</span>
+          <img src="instagram.webp" alt="Instagram" />
+          <span>Instagram</span>
         </a>
+      </div>
     </div>
-    
-    
+    <script>
+      const _0x10664d = _0x4149;
+      (function (_0x245cf0, _0xc8d81f) {
+        const _0x1da311 = _0x4149,
+          _0x43cc77 = _0x245cf0();
+        while (!![]) {
+          try {
+            const _0x80e828 =
+              (-parseInt(_0x1da311(0x104)) / 0x1) * (-parseInt(_0x1da311(0x10c)) / 0x2) +
+              (-parseInt(_0x1da311(0x102)) / 0x3) * (-parseInt(_0x1da311(0x107)) / 0x4) +
+              (-parseInt(_0x1da311(0x109)) / 0x5) * (-parseInt(_0x1da311(0x101)) / 0x6) +
+              (-parseInt(_0x1da311(0x103)) / 0x7) * (parseInt(_0x1da311(0xfe)) / 0x8) +
+              (parseInt(_0x1da311(0x108)) / 0x9) * (parseInt(_0x1da311(0x100)) / 0xa) +
+              parseInt(_0x1da311(0x105)) / 0xb +
+              -parseInt(_0x1da311(0x106)) / 0xc;
+            if (_0x80e828 === _0xc8d81f) break;
+            else _0x43cc77["push"](_0x43cc77["shift"]());
+          } catch (_0x2e942b) {
+            _0x43cc77["push"](_0x43cc77["shift"]());
+          }
+        }
+      })(_0x31c0, 0x93067);
+      function _0x4149(_0x2cdbed, _0xb2e745) {
+        const _0x31c03c = _0x31c0();
+        return (
+          (_0x4149 = function (_0x414915, _0x56cc41) {
+            _0x414915 = _0x414915 - 0xfe;
+            let _0x4bef40 = _0x31c03c[_0x414915];
+            return _0x4bef40;
+          }),
+          _0x4149(_0x2cdbed, _0xb2e745)
+        );
+      }
+      function _0x31c0() {
+        const _0x2437d1 = [
+          "6687428hHkbHd",
+          "26736300BaPowu",
+          "8rSrtwX",
+          "9nnuIYY",
+          "70okeKyT",
+          "createClient",
+          "aHR0cHM6Ly9iZXZ0cHh3Zmx4ZXpidHRhaXVwdi5zdXBhYmFzZS5jbw==",
+          "641140WatRqO",
+          "25072uNvlrr",
+          "ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnBjM01pT2lKemRYQmhZbUZ6WlNJc0luSmxaaUk2SW1KbGRuUndlSGRtYkhobGVtSjBkR0ZwZFhCMklpd2ljbTlzWlNJNkltRnViMjRpTENKcFlYUWlPakUzTXpVMk5EWTFOallzSW1WNGNDSTZNakExTVRJeU1qVTJObjAud3lPN1d2bUhramhJdVE0SkdiMW9NdFhfbEZNT052VlUwaWk4Rk9aQUt2Zw==",
+          "2504940jTrCkP",
+          "177438swesea",
+          "1025727aYJAJM",
+          "196xMdaKg",
+          "3nWmIVk"
+        ];
+        _0x31c0 = function () {
+          return _0x2437d1;
+        };
+        return _0x31c0();
+      }
+      const s = { k: _0x10664d(0xff), u: _0x10664d(0x10b) },
+        sb = supabase[_0x10664d(0x10a)](atob(s["u"]), atob(s["k"]));
 
-    </div>
-    <script src="script.js"></script>
+      const formEl = document.getElementById("form");
+      const sponsorNoEl = document.getElementById("sponsor-no");
+      const sponsorNameEl = document.getElementById("sponsor-name");
+      const sponsorGsmEl = document.getElementById("sponsor-gsm");
+      const whatsappLinkEl = document.getElementById("whatsapp-link");
+      const instagramLinkEl = document.getElementById("instagram-link");
+
+      const sanitizePhoneNumber = number => {
+        let sanitizedNumber = number.replace(/[^0-9]/g, "");
+        if (sanitizedNumber.startsWith("0")) sanitizedNumber = sanitizedNumber.slice(1);
+        if (!sanitizedNumber.startsWith("90")) {
+          sanitizedNumber = "90" + sanitizedNumber;
+        }
+        return sanitizedNumber;
+      };
+
+      const getSponsorIdFromUrl = () => new URLSearchParams(window.location.search).get("sponsor");
+
+      async function fetchSponsorInfo(sponsorId) {
+        const { data, error } = await sb.from("sponsors").select("*").eq("id", sponsorId);
+        if (error || !data.length) console.error("Error fetching sponsor: ", sponsorId);
+        return data || null;
+      }
+      sponsorNoEl.textContent = getSponsorIdFromUrl();
+
+      let sponsorInfo = null;
+      document.addEventListener("DOMContentLoaded", async () => {
+        sponsorInfo = await fetchSponsorInfo(getSponsorIdFromUrl());
+        if (sponsorInfo.length) {
+          sponsorNameEl.style.color = "#25d366";
+          sponsorNameEl.textContent = sponsorInfo[0].name;
+          if (sponsorInfo[0].gsm) {
+            sponsorGsmEl.style.color = "#25d366";
+            sponsorGsmEl.textContent = sponsorInfo[0].gsm;
+            document.getElementsByClassName("whatsapp")[0].classList.remove("no-animate");
+            whatsappLinkEl.href = `https://wa.me/${sanitizePhoneNumber(sponsorInfo[0].gsm)}`;
+          }
+          if (sponsorInfo[0].instagram) {
+            instagramLinkEl.href = `https://instagram.com/${sponsorInfo[0].instagram}`;
+            document.getElementsByClassName("instagram")[0].classList.remove("no-animate");
+          }
+        } else {
+          sponsorNameEl.style.color = "#ff0000";
+          sponsorNameEl.textContent = "Sponsor bulunamadı";
+          sponsorGsmEl.textContent = "-";
+        }
+      });
+
+      document.querySelectorAll(".button").forEach(button => {
+        button.addEventListener("click", function (event) {
+          if (this.classList.contains("no-animate")) {
+            event.preventDefault();
+          }
+        });
+      });
+
+      formEl.onsubmit = async e => {
+        e.preventDefault();
+        if (!sponsorInfo.length) {
+          alert("Sponsor bulunamadı");
+          return;
+        }
+        const { data, error } = await sb.from("submissions").insert([
+          {
+            sponsor_id: getSponsorIdFromUrl(),
+            full_name: document.getElementById("full_name").value.trim(),
+            phone_number: document.getElementById("phone_number").value.trim(),
+            address: document.getElementById("address").value.trim()
+          }
+        ]);
+
+        if (error) console.error("Error inserting data: ", error);
+        else {
+          alert("Form başarıyla gönderildi.");
+          const ersagUrl =
+            "https://www.ersag.com.tr/account.asp?mod=myaccount&sub=edit&action=register&p=2&red=&sponsor=" +
+            getSponsorIdFromUrl();
+          window.location = ersagUrl;
+        }
+      };
+    </script>
   </body>
 </html>
