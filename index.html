@@ -292,9 +292,8 @@
         if (sponsorInfo.length) {
           sponsorNameEl.style.color = "#25d366";
           sponsorNameEl.textContent = sponsorInfo[0].name;
+          console.log(sponsorInfo.gsm);
           if (sponsorInfo[0].gsm) {
-            sponsorGsmEl.style.color = "#25d366";
-            sponsorGsmEl.textContent = sponsorInfo[0].gsm;
             document.getElementsByClassName("whatsapp")[0].classList.remove("no-animate");
             whatsappLinkEl.href = `https://wa.me/${sanitizePhoneNumber(sponsorInfo[0].gsm)}`;
           }
@@ -308,7 +307,7 @@
           sponsorGsmEl.textContent = "-";
         }
       });
-
+      
       document.querySelectorAll(".button").forEach(button => {
         button.addEventListener("click", function (event) {
           if (this.classList.contains("no-animate")) {
